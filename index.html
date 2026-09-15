@@ -6,18 +6,28 @@
 
   <title>Josie Makes</title>
   <meta name="description"
-        content="Josie Mikita makes things with data, technology, systems, design, and an unreasonable amount of curiosity.">
+        content="Josie Mikita works with data, technology, systems, communication, and creative problem-solving.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --ink: #171717;
-      --paper: #fffdf8;
-      --soft: #f3f0e9;
+      --ink: #18151c;
+
+      /* cousins with white */
+      --paper: #fff7fc;
+      --paper-2: #f8f1ff;
+
+      /* internet candy */
       --pink: #ff3ea5;
       --blue: #315cff;
-      --lime: #b8f500;
+      --lime: #c7f900;
       --orange: #ff7a00;
       --purple: #8b45ff;
+
       --border: 2px solid var(--ink);
     }
 
@@ -31,9 +41,12 @@
 
     body {
       margin: 0;
-      background: var(--paper);
+      background:
+        radial-gradient(circle at 90% 12%, #f2e6ff 0, transparent 24rem),
+        radial-gradient(circle at 5% 75%, #ffe7f4 0, transparent 22rem),
+        var(--paper);
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Atkinson Hyperlegible", Arial, sans-serif;
       line-height: 1.5;
     }
 
@@ -41,22 +54,24 @@
       color: inherit;
     }
 
-    a:focus-visible {
+    a:focus-visible,
+    button:focus-visible {
       outline: 4px solid var(--lime);
-      outline-offset: 4px;
+      outline-offset: 5px;
     }
 
-    /* ---------- NAV ---------- */
+
+    /* ---------------- NAV ---------------- */
 
     header {
       border-bottom: var(--border);
-      background: var(--paper);
+      background: rgba(255, 247, 252, .92);
     }
 
     nav {
       max-width: 1100px;
-      margin: auto;
       min-height: 72px;
+      margin: auto;
       padding: 0 24px;
 
       display: flex;
@@ -66,10 +81,11 @@
     }
 
     .logo {
+      font-family: "Space Grotesk", sans-serif;
       font-size: 1.25rem;
-      font-weight: 900;
+      font-weight: 700;
+      letter-spacing: -.04em;
       text-decoration: none;
-      letter-spacing: -.03em;
     }
 
     .logo:hover {
@@ -78,27 +94,35 @@
 
     .nav-links {
       display: flex;
-      gap: 22px;
       align-items: center;
+      gap: 22px;
     }
 
     .nav-links a {
+      font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       text-decoration: none;
       border-bottom: 3px solid transparent;
     }
 
     .nav-links a:hover {
-      border-color: var(--blue);
+      color: var(--blue);
+      border-color: var(--pink);
     }
 
-    .nav-links .mystery:hover {
+    .nav-links .mystery {
+      transition: transform .15s ease, color .15s ease;
+    }
+
+    .nav-links .mystery:hover,
+    .nav-links .mystery:active {
       color: var(--pink);
       border-color: var(--lime);
-      transform: rotate(-4deg);
+      transform: rotate(-7deg) scale(1.15);
     }
 
-    /* ---------- HERO ---------- */
+
+    /* ---------------- MAIN ---------------- */
 
     main {
       max-width: 1100px;
@@ -106,9 +130,12 @@
       padding: 0 24px;
     }
 
+
+    /* ---------------- HERO ---------------- */
+
     .hero {
-      min-height: 60vh;
-      padding: 90px 0 80px;
+      min-height: 62vh;
+      padding: 90px 0 75px;
 
       display: flex;
       flex-direction: column;
@@ -117,42 +144,77 @@
     }
 
     .eyebrow {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       font-family: "Courier New", monospace;
-      font-weight: 700;
       font-size: .9rem;
-      text-transform: uppercase;
+      font-weight: 700;
       letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 0;
+      font-family: "Space Grotesk", sans-serif;
       font-size: clamp(4rem, 13vw, 9rem);
+      font-weight: 700;
       line-height: .82;
-      letter-spacing: -.075em;
-      font-weight: 900;
+      letter-spacing: -.08em;
     }
 
-    .makes {
+    .verb-button {
       position: relative;
       display: inline-block;
+
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+
+      font: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+
+      cursor: pointer;
     }
 
-    .makes::after {
+    .verb-button::after {
       content: "";
       position: absolute;
       left: 2%;
       right: -3%;
-      bottom: -10px;
-      height: 15px;
+      bottom: -11px;
+      height: 16px;
       background: var(--pink);
       z-index: -1;
       transform: rotate(-1deg);
+
+      transition:
+        background .15s ease,
+        height .15s ease,
+        transform .15s ease;
+    }
+
+    .verb-button:hover::after {
+      height: 24px;
+      background: var(--lime);
+      transform: rotate(1deg);
+    }
+
+    #verb {
+      display: inline-block;
+      min-width: 4ch;
+    }
+
+    .verb-hint {
+      margin: 25px 0 0;
+      font-family: "Courier New", monospace;
+      font-size: .78rem;
+      opacity: .62;
     }
 
     .intro {
-      max-width: 700px;
-      margin: 42px 0 0;
+      max-width: 720px;
+      margin: 32px 0 0;
       font-size: clamp(1.15rem, 3vw, 1.5rem);
     }
 
@@ -163,36 +225,49 @@
       text-underline-offset: 4px;
     }
 
-    /* ---------- DOORS ---------- */
 
-    .doors {
+    /* ---------------- PORTALS ---------------- */
+
+    .portals {
+      padding: 10px 0 95px;
+
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding-bottom: 80px;
+      gap: clamp(28px, 6vw, 80px);
+
+      align-items: center;
+      justify-items: center;
     }
 
-    .door {
-      min-height: 260px;
+    .portal {
+      width: min(100%, 430px);
+      aspect-ratio: 1;
       border: var(--border);
-      padding: 30px;
+      border-radius: 50%;
+      padding: clamp(35px, 5vw, 60px);
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
 
+      text-align: center;
       text-decoration: none;
-      background: var(--paper);
 
       transition:
-        transform .15s ease,
-        box-shadow .15s ease,
-        background .15s ease;
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease,
+        color .18s ease;
     }
 
-    .door:hover {
-      transform: translate(-5px, -5px);
-      box-shadow: 8px 8px 0 var(--ink);
+    .portal:hover {
+      transform: translate(-6px, -6px) scale(1.025);
+      box-shadow: 10px 10px 0 var(--ink);
+    }
+
+    .work {
+      background: var(--paper-2);
     }
 
     .work:hover {
@@ -200,63 +275,101 @@
       color: white;
     }
 
-    .make:hover {
+    .play {
+      background: #fff0f8;
+    }
+
+    .play:hover {
       background: var(--pink);
     }
 
-    .door-label {
+    .portal-label {
       font-family: "Courier New", monospace;
-      font-size: .85rem;
+      font-size: .78rem;
       font-weight: 700;
+      letter-spacing: .06em;
       text-transform: uppercase;
     }
 
-    .door h2 {
-      margin: 30px 0 5px;
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
+    .portal h2 {
+      margin: 14px 0 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
       line-height: .9;
-      letter-spacing: -.05em;
+      letter-spacing: -.07em;
     }
 
-    .door p {
-      margin: 10px 0 0;
-      max-width: 420px;
+    .portal p {
+      max-width: 290px;
+      margin: 8px 0 0;
+      font-size: 1.05rem;
     }
 
     .arrow {
-      margin-top: 25px;
-      font-size: 2rem;
-      font-weight: 900;
+      margin-top: 18px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
     }
 
-    /* ---------- CURRENTLY ---------- */
+
+    /* ---------------- CURRENTLY ---------------- */
 
     .currently {
-      margin-bottom: 80px;
-      padding: 24px;
+      position: relative;
+      margin: 0 auto 90px;
+      max-width: 720px;
+      padding: 30px 36px;
+
       border: var(--border);
-      background: var(--soft);
+      border-radius: 999px;
+
+      background: var(--paper);
+      text-align: center;
+    }
+
+    .currently::before {
+      content: "✦";
+      position: absolute;
+      top: -24px;
+      right: 7%;
+
+      width: 48px;
+      height: 48px;
+      border: var(--border);
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--lime);
+      font-size: 1.25rem;
     }
 
     .currently span {
       font-family: "Courier New", monospace;
-      font-size: .8rem;
+      font-size: .78rem;
       font-weight: 700;
+      letter-spacing: .05em;
       text-transform: uppercase;
     }
 
     .currently p {
       margin: 5px 0 0;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
-    /* ---------- FOOTER ---------- */
+
+    /* ---------------- FOOTER ---------------- */
 
     footer {
-      border-top: var(--border);
       padding: 28px 24px;
+      border-top: var(--border);
+
       font-family: "Courier New", monospace;
       font-size: .85rem;
+
+      background: var(--paper-2);
     }
 
     .footer-inner {
@@ -265,22 +378,23 @@
 
       display: flex;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
     footer a:hover {
       background: var(--lime);
     }
 
-    /* ---------- MOBILE ---------- */
+
+    /* ---------------- MOBILE ---------------- */
 
     @media (max-width: 650px) {
 
       nav {
         min-height: auto;
-        padding-top: 18px;
-        padding-bottom: 18px;
+        padding-top: 17px;
+        padding-bottom: 17px;
         align-items: flex-start;
       }
 
@@ -288,34 +402,57 @@
         gap: 11px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        font-size: .82rem;
+        font-size: .8rem;
       }
 
       .hero {
         min-height: auto;
-        padding: 70px 0 60px;
+        padding: 68px 0 60px;
       }
 
       h1 {
-        font-size: clamp(4rem, 23vw, 7rem);
+        font-size: clamp(4rem, 22vw, 7rem);
       }
 
-      .doors {
+      .verb-hint {
+        margin-top: 22px;
+      }
+
+      .portals {
         grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 75px;
       }
 
-      .door {
-        min-height: 220px;
+      .portal {
+        width: min(88vw, 390px);
+      }
+
+      .currently {
+        border-radius: 32px;
+        padding: 28px 25px;
       }
     }
 
+
+    /* Touchscreens don't have meaningful hover */
+    @media (hover: none) {
+      .portal:active {
+        transform: scale(.98);
+      }
+    }
+
+
+    /* Accessibility */
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
 
-      .door {
-        transition: none;
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
       }
     }
 
@@ -332,7 +469,7 @@
 
       <div class="nav-links">
         <a href="#work">WORK</a>
-        <a href="#make">MAKE</a>
+        <a href="#play">PLAY</a>
         <a href="#about">ABOUT</a>
         <a class="mystery" href="#mystery">???</a>
       </div>
@@ -349,44 +486,56 @@
 
       <h1>
         JOSIE<br>
-        <span class="makes">MAKES.</span>
+
+        <button
+          class="verb-button"
+          id="verbButton"
+          type="button"
+          aria-label="Change what Josie does"
+          title="Poke me."
+        >
+          <span id="verb">MAKES</span>.
+        </button>
       </h1>
 
+      <p class="verb-hint">
+        ↑ poke that
+      </p>
+
       <p class="intro">
-        I like making things — with
-        <strong>data</strong>,
-        technology, systems, design,
-        and whatever else I need to learn along the way.
+        I like turning ideas into things — using
+        <strong>data</strong>, technology, systems, design,
+        creativity, and whatever I need to learn along the way.
       </p>
 
     </section>
 
 
-    <section class="doors">
+    <section class="portals">
 
-      <a class="door work" id="work" href="#">
-        <div>
-          <span class="door-label">Professional-ish</span>
-          <h2>WORK</h2>
-          <p>
-            Data, analytics, technology, systems,
-            projects, and problems I figured out.
-          </p>
-        </div>
+      <a class="portal work" id="work" href="#">
+        <span class="portal-label">The résumé-friendly stuff</span>
+
+        <h2>WORK</h2>
+
+        <p>
+          Data, analytics, technology, systems,
+          projects, and problems I figured out.
+        </p>
 
         <span class="arrow" aria-hidden="true">→</span>
       </a>
 
 
-      <a class="door make" id="make" href="#">
-        <div>
-          <span class="door-label">Other things I've made</span>
-          <h2>MAKE</h2>
-          <p>
-            Art, design, experiments, creative projects,
-            and things that seemed like a good idea.
-          </p>
-        </div>
+      <a class="portal play" id="play" href="#">
+        <span class="portal-label">The curiosity-friendly stuff</span>
+
+        <h2>PLAY</h2>
+
+        <p>
+          Art, design, experiments, creative projects,
+          and things that seemed like a good idea.
+        </p>
 
         <span class="arrow" aria-hidden="true">→</span>
       </a>
@@ -395,10 +544,8 @@
 
 
     <section class="currently">
-      <span>Currently making:</span>
-      <p>
-        This website, apparently.
-      </p>
+      <span>Currently making</span>
+      <p>This website, apparently.</p>
     </section>
 
   </main>
@@ -406,14 +553,57 @@
 
   <footer id="about">
     <div class="footer-inner">
+
       <span>© 2026 Josie Mikita</span>
 
       <span>
         Washington State ·
         <a href="https://github.com/Jojomiki">GitHub</a>
       </span>
+
     </div>
   </footer>
+
+
+  <script>
+    const verbs = [
+      "MAKES",
+      "BUILDS",
+      "CREATES",
+      "LEARNS",
+      "ANALYZES",
+      "DESIGNS",
+      "BAKES",
+      "PAINTS",
+      "FIGURES IT OUT"
+    ];
+
+    const colors = [
+      "#ff3ea5",
+      "#315cff",
+      "#8b45ff",
+      "#ff7a00",
+      "#c7f900"
+    ];
+
+    const verbButton = document.getElementById("verbButton");
+    const verb = document.getElementById("verb");
+
+    let verbIndex = 0;
+
+    function changeVerb() {
+      verbIndex = (verbIndex + 1) % verbs.length;
+
+      verb.textContent = verbs[verbIndex];
+
+      const randomColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      verb.style.color = randomColor;
+    }
+
+    verbButton.addEventListener("click", changeVerb);
+  </script>
 
 </body>
 </html>
