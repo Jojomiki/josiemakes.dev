@@ -990,7 +990,68 @@ a.project-button:hover {
 
 }
 
+/* ========================================
+   GLITTER CRIMES
+   ======================================== */
 
+.click-sparkle {
+  position: fixed;
+  z-index: 9999;
+
+  pointer-events: none;
+  user-select: none;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+
+  transform: translate(-50%, -50%);
+  animation: sparkle-crime 900ms ease-out forwards;
+}
+
+@keyframes sparkle-crime {
+
+  0% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      scale(.4)
+      rotate(0deg);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(
+        calc(-50% + var(--sparkle-x)),
+        calc(-50% + var(--sparkle-y))
+      )
+      scale(1.25)
+      rotate(var(--sparkle-rotate));
+  }
+}
+
+
+/* make the giant star LOOK suspiciously clickable */
+
+.star-title {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* responsible glitter citizenship */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .click-sparkle {
+    display: none;
+  }
+
+}
 
 
 
