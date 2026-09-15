@@ -63,13 +63,25 @@ if (document.readyState === "loading") {
    GLITTER CRIMES
    ======================================== */
 
-const sparkleSymbols = ["✦", "✧", "⋆", "·"];
+const sparkleSymbols = [
+    "✦", "*", "⋆", "·",
+    "★", "✧", "⋆",
+    "★", "✶", "✷"
+];
 const sparkleColors = [
-    "#ff3ea5",
-    "#315cff",
-    "#c7f900",
-    "#ff7a00",
-    "#8b45ff"
+    "#ff2fa8", // electric pink
+    "#ff71c8", // bubblegum
+    "#ffb3e6", // cotton candy
+    "#9b5cff", // electric violet
+    "#c9a7ff", // lavender
+    "#654cff", // ultraviolet
+    "#45caff", // electric sky
+    "#9eeaff", // icy blue
+    "#58ffd1", // mint/cyan
+    "#d7ff45", // radioactive lime
+    "#ffe66d", // warm gold
+    "#ff9f68", // peach
+    "#ffffff"  // actual starlight
 ];
 
 function makeSparkleBurst(x, y, amount = 8) {
@@ -93,7 +105,7 @@ function makeSparkleBurst(x, y, amount = 8) {
             sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
 
         const angle = Math.random() * Math.PI * 2;
-        const distance = 35 + Math.random() * 70;
+        const distance = 45 + Math.random() * 140;
 
         sparkle.style.setProperty(
             "--sparkle-x",
@@ -110,7 +122,19 @@ function makeSparkleBurst(x, y, amount = 8) {
             `${Math.random() * 360 - 180}deg`
         );
 
-        sparkle.style.fontSize = `${12 + Math.random() * 18}px`;
+const sizeRoll = Math.random();
+
+let size;
+
+if (sizeRoll < 0.55) {
+    size = 6 + Math.random() * 10;
+} else if (sizeRoll < 0.9) {
+    size = 16 + Math.random() * 18;
+} else {
+    size = 34 + Math.random() * 22;
+}
+
+sparkle.style.fontSize = `${size}px`;
 
         document.body.appendChild(sparkle);
 
@@ -125,7 +149,7 @@ function makeSparkleBurst(x, y, amount = 8) {
 
 document.querySelectorAll(".star-card").forEach((card) => {
     card.addEventListener("pointerdown", (event) => {
-        makeSparkleBurst(event.clientX, event.clientY, 9);
+        makeSparkleBurst(event.clientX, event.clientY, 13);
     });
 });
 
@@ -136,6 +160,6 @@ const titleStar = document.querySelector(".star-title");
 
 if (titleStar) {
     titleStar.addEventListener("pointerdown", (event) => {
-        makeSparkleBurst(event.clientX, event.clientY, 28);
+        makeSparkleBurst(event.clientX, event.clientY, 84);
     });
 }
