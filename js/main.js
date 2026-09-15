@@ -36,3 +36,15 @@
     }
 
     verbButton.addEventListener("click", changeVerb);
+
+/* ========================================
+   STARS
+   ======================================== */
+
+document.querySelectorAll(".star-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const flipped = card.classList.toggle("is-flipped");
+
+    card.setAttribute("aria-pressed", flipped);
+  });
+});
