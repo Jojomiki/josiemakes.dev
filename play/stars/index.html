@@ -1,16 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Stars | Josie Makes</title>
+
+  <meta
+    name="description"
+    content="STARS — an art project by Josie Mikita exploring optimism, possibility, curiosity, and the unseen through astronomical imagery and words."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <main>
-    <h1>STARS ✦</h1>
-    <p>The universe is under construction.</p>
+
+<body class="stars-page">
+
+  <header>
+    <nav aria-label="Main navigation">
+
+      <a class="logo" href="/">JOSIE MAKES</a>
+
+      <div class="nav-links">
+        <a href="/work/">WORK</a>
+        <a class="active" href="/play/">PLAY</a>
+        <a href="/#about">ABOUT</a>
+        <a class="mystery" href="/#mystery">???</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main class="stars-main">
+
+    <section class="stars-intro">
+
+      <a class="back-link" href="/play/">← PLAY</a>
+
+      <p class="eyebrow">ART + WORDS + THE UNIVERSE</p>
+
+      <h1>
+        STARS<span class="star-title">✦</span>
+      </h1>
+
+      <p class="stars-lede">
+        An experiment in optimism, possibility,
+        <span class="stars-highlight">and the things we don't always see.</span>
+      </p>
+
+      <div class="stars-story">
+
+        <p>
+          I paired astronomical imagery with words that made me think
+          about what it means to be tiny in an ever-expanding universe —
+          and still capable of making something, learning something,
+          helping someone, or changing what happens next.
+        </p>
+
+        <p>
+          Each piece pairs an image of the universe with a quote,
+          alongside a companion page exploring the object itself.
+        </p>
+
+        <p class="stars-someday">
+          Someday, maybe a coffee-table book.
+          For now, a little corner of the internet. ✦
+        </p>
+
+      </div>
+
+      <p class="flip-instruction">
+        TAP / CLICK A PIECE TO SEE WHAT'S ON THE OTHER SIDE ↻
+      </p>
+
+    </section>
+
+
+    <section class="star-gallery" aria-label="Stars artwork">
+
+
+      <!-- CALABASH -->
+
+      <button
+        class="star-card"
+        type="button"
+        aria-label="Flip the Calabash Nebula artwork"
+        aria-pressed="false"
+      >
+
+        <span class="star-card-inner">
+
+          <span class="star-face star-front">
+            <img
+              src="/images/stars/Calabash.png"
+              alt="Calabash Nebula artwork and quote"
+            >
+          </span>
+
+          <span class="star-face star-back">
+            <img
+              src="/images/stars/Calabash2.png"
+              alt="Companion information page about the Calabash Nebula"
+            >
+          </span>
+
+        </span>
+
+      </button>
+
+
+      <!-- BUBBLE -->
+
+      <button
+        class="star-card"
+        type="button"
+        aria-label="Flip the Bubble Nebula artwork"
+        aria-pressed="false"
+      >
+
+        <span class="star-card-inner">
+
+          <span class="star-face star-front">
+            <img
+              src="/images/stars/bubble1.png"
+              alt="Bubble Nebula artwork and quote"
+            >
+          </span>
+
+          <span class="star-face star-back">
+            <img
+              src="/images/stars/bubble2.png"
+              alt="Companion information page about the Bubble Nebula"
+            >
+          </span>
+
+        </span>
+
+      </button>
+
+
+      <!-- COSMIC CLIFFS -->
+
+      <button
+        class="star-card"
+        type="button"
+        aria-label="Flip the Cosmic Cliffs artwork"
+        aria-pressed="false"
+      >
+
+        <span class="star-card-inner">
+
+          <span class="star-face star-front">
+            <img
+              src="/images/stars/cosmic%20cliffs%201.png"
+              alt="Cosmic Cliffs artwork and quote"
+            >
+          </span>
+
+          <span class="star-face star-back">
+            <img
+              src="/images/stars/cosmic%20cliffs%202.png"
+              alt="Companion information page about the Cosmic Cliffs"
+            >
+          </span>
+
+        </span>
+
+      </button>
+
+
+    </section>
+
   </main>
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <span>© 2026 Josie Mikita</span>
+
+      <span>
+        Made of stardust ·
+        <a href="/">josiemakes.dev</a>
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="/js/main.js"></script>
+
 </body>
 </html>
