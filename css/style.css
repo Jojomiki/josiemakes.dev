@@ -440,3 +440,310 @@
         transition-duration: .01ms !important;
       }
     }
+
+
+/* ========================================
+   WORK PAGE
+   ======================================== */
+
+.work-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.work-intro {
+  max-width: 850px;
+  padding: 85px 0 60px;
+}
+
+.work-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(4.5rem, 13vw, 9rem);
+  line-height: .9;
+  letter-spacing: -.075em;
+}
+
+.work-lede {
+  max-width: 720px;
+  margin: 28px 0 0;
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+}
+
+.marker {
+  text-decoration: underline;
+  text-decoration-color: var(--lime);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 4px;
+}
+
+
+/* PROJECTS */
+
+.project-list {
+  display: grid;
+  gap: 28px;
+  padding-bottom: 80px;
+}
+
+.project-card {
+  --project-color: var(--pink);
+
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+
+  padding: clamp(28px, 5vw, 52px);
+
+  border: var(--border);
+  border-radius: 30px;
+
+  background: var(--paper);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+
+/* little color stripe */
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 10px;
+  background: var(--project-color);
+
+  transition: width .18s ease;
+}
+
+.project-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.project-card:hover::before {
+  width: 18px;
+}
+
+
+.project-blue {
+  --project-color: var(--blue);
+}
+
+.project-orange {
+  --project-color: var(--orange);
+}
+
+.project-pink {
+  --project-color: var(--pink);
+}
+
+
+/* LEFT SIDE */
+
+.project-number {
+  margin: 0 0 12px;
+
+  font-family: "Courier New", monospace;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.project-heading h2 {
+  margin: 0;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+.project-question {
+  max-width: 580px;
+  margin: 22px 0 0;
+
+  font-size: 1.18rem;
+}
+
+
+/* RIGHT SIDE */
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-details p {
+  margin: 0;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  padding: 5px 11px;
+
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+
+  background: var(--paper-2);
+
+  font-family: "Courier New", monospace;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+
+/* BUTTONS */
+
+.project-button {
+  align-self: flex-start;
+
+  display: inline-block;
+  padding: 9px 15px;
+
+  border: var(--border);
+  border-radius: 999px;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform .15s ease,
+    background .15s ease;
+}
+
+a.project-button:hover {
+  background: var(--project-color);
+  transform: rotate(-1deg);
+}
+
+.project-blue a.project-button:hover {
+  color: white;
+}
+
+.project-coming {
+  opacity: .7;
+}
+
+
+/* IN PROGRESS */
+
+.project-status {
+  display: inline-block;
+
+  margin-bottom: 15px;
+  padding: 5px 11px;
+
+  border: var(--border);
+  border-radius: 999px;
+
+  background: var(--lime);
+
+  font-family: "Courier New", monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+
+/* GITHUB CALLOUT */
+
+.github-callout {
+  margin-bottom: 90px;
+  padding: clamp(28px, 5vw, 45px);
+
+  border: var(--border);
+  border-radius: 30px;
+
+  background: var(--ink);
+  color: white;
+}
+
+.github-callout h2 {
+  margin: 0 0 10px;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -.04em;
+}
+
+.github-callout p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0 0 22px;
+}
+
+.github-callout a {
+  display: inline-block;
+
+  padding: 9px 14px;
+  border-radius: 999px;
+
+  background: var(--lime);
+  color: var(--ink);
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform .15s ease,
+    background .15s ease;
+}
+
+.github-callout a:hover {
+  background: var(--pink);
+  transform: rotate(-1deg);
+}
+
+
+/* WORK MOBILE */
+
+@media (max-width: 700px) {
+
+  .work-intro {
+    padding: 60px 0 45px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    border-radius: 24px;
+  }
+
+  .project-card::before {
+    width: 7px;
+  }
+
+  .project-card:hover::before {
+    width: 11px;
+  }
+
+  .project-heading h2 {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+
+  .github-callout {
+    margin-bottom: 60px;
+    border-radius: 24px;
+  }
+}
