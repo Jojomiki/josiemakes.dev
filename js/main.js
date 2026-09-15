@@ -59,3 +59,83 @@ if (document.readyState === "loading") {
 } else {
     setupStarCards();
 }
+/* ========================================
+   GLITTER CRIMES
+   ======================================== */
+
+const sparkleSymbols = ["✦", "✧", "⋆", "·"];
+const sparkleColors = [
+    "#ff3ea5",
+    "#315cff",
+    "#c7f900",
+    "#ff7a00",
+    "#8b45ff"
+];
+
+function makeSparkleBurst(x, y, amount = 8) {
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reduceMotion) return;
+
+    for (let i = 0; i < amount; i++) {
+        const sparkle = document.createElement("span");
+
+        sparkle.className = "click-sparkle";
+        sparkle.textContent =
+            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+
+        sparkle.style.left = `${x}px`;
+        sparkle.style.top = `${y}px`;
+
+        sparkle.style.color =
+            sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 35 + Math.random() * 70;
+
+        sparkle.style.setProperty(
+            "--sparkle-x",
+            `${Math.cos(angle) * distance}px`
+        );
+
+        sparkle.style.setProperty(
+            "--sparkle-y",
+            `${Math.sin(angle) * distance}px`
+        );
+
+        sparkle.style.setProperty(
+            "--sparkle-rotate",
+            `${Math.random() * 360 - 180}deg`
+        );
+
+        sparkle.style.fontSize = `${12 + Math.random() * 18}px`;
+
+        document.body.appendChild(sparkle);
+
+        sparkle.addEventListener("animationend", () => {
+            sparkle.remove();
+        });
+    }
+}
+
+
+/* sparkle when artwork flips */
+
+document.querySelectorAll(".star-card").forEach((card) => {
+    card.addEventListener("pointerdown", (event) => {
+        makeSparkleBurst(event.clientX, event.clientY, 9);
+    });
+});
+
+
+/* THE BIG STAR HAS NO ADULT SUPERVISION */
+
+const titleStar = document.querySelector(".star-title");
+
+if (titleStar) {
+    titleStar.addEventListener("pointerdown", (event) => {
+        makeSparkleBurst(event.clientX, event.clientY, 28);
+    });
+}
