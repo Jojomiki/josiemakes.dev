@@ -35,7 +35,9 @@
       verb.style.color = randomColor;
     }
 
+ if (verbButton && verb) {
     verbButton.addEventListener("click", changeVerb);
+}
 
 /* ========================================
    STARS
