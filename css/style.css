@@ -1007,7 +1007,7 @@ a.project-button:hover {
   font-weight: 700;
 
   transform: translate(-50%, -50%);
-  animation: sparkle-crime 900ms ease-out forwards;
+  animation: sparkle-crime 1200ms cubic-bezier(.15,.75,.25,1) forwards;
 }
 
 @keyframes sparkle-crime {
@@ -1031,7 +1031,7 @@ a.project-button:hover {
         calc(-50% + var(--sparkle-x)),
         calc(-50% + var(--sparkle-y))
       )
-      scale(1.25)
+      scale(.7)
       rotate(var(--sparkle-rotate));
   }
 }
