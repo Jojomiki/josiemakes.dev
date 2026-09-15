@@ -1,15 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Josie Makes</title>
+  <meta name="description"
+        content="Josie Mikita makes things with data, technology, systems, design, and an unreasonable amount of curiosity.">
+
+  <style>
+    :root {
+      --ink: #171717;
+      --paper: #fffdf8;
+      --soft: #f3f0e9;
+      --pink: #ff3ea5;
+      --blue: #315cff;
+      --lime: #b8f500;
+      --orange: #ff7a00;
+      --purple: #8b45ff;
+      --border: 2px solid var(--ink);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 4px solid var(--lime);
+      outline-offset: 4px;
+    }
+
+    /* ---------- NAV ---------- */
+
+    header {
+      border-bottom: var(--border);
+      background: var(--paper);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 900;
+      text-decoration: none;
+      letter-spacing: -.03em;
+    }
+
+    .logo:hover {
+      color: var(--pink);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--blue);
+    }
+
+    .nav-links .mystery:hover {
+      color: var(--pink);
+      border-color: var(--lime);
+      transform: rotate(-4deg);
+    }
+
+    /* ---------- HERO ---------- */
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .hero {
+      min-height: 60vh;
+      padding: 90px 0 80px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-family: "Courier New", monospace;
+      font-weight: 700;
+      font-size: .9rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(4rem, 13vw, 9rem);
+      line-height: .82;
+      letter-spacing: -.075em;
+      font-weight: 900;
+    }
+
+    .makes {
+      position: relative;
+      display: inline-block;
+    }
+
+    .makes::after {
+      content: "";
+      position: absolute;
+      left: 2%;
+      right: -3%;
+      bottom: -10px;
+      height: 15px;
+      background: var(--pink);
+      z-index: -1;
+      transform: rotate(-1deg);
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 42px 0 0;
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+    }
+
+    .intro strong {
+      text-decoration: underline;
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 5px;
+      text-underline-offset: 4px;
+    }
+
+    /* ---------- DOORS ---------- */
+
+    .doors {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding-bottom: 80px;
+    }
+
+    .door {
+      min-height: 260px;
+      border: var(--border);
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      text-decoration: none;
+      background: var(--paper);
+
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease;
+    }
+
+    .door:hover {
+      transform: translate(-5px, -5px);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .work:hover {
+      background: var(--blue);
+      color: white;
+    }
+
+    .make:hover {
+      background: var(--pink);
+    }
+
+    .door-label {
+      font-family: "Courier New", monospace;
+      font-size: .85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .door h2 {
+      margin: 30px 0 5px;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: .9;
+      letter-spacing: -.05em;
+    }
+
+    .door p {
+      margin: 10px 0 0;
+      max-width: 420px;
+    }
+
+    .arrow {
+      margin-top: 25px;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    /* ---------- CURRENTLY ---------- */
+
+    .currently {
+      margin-bottom: 80px;
+      padding: 24px;
+      border: var(--border);
+      background: var(--soft);
+    }
+
+    .currently span {
+      font-family: "Courier New", monospace;
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .currently p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      border-top: var(--border);
+      padding: 28px 24px;
+      font-family: "Courier New", monospace;
+      font-size: .85rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer a:hover {
+      background: var(--lime);
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 650px) {
+
+      nav {
+        min-height: auto;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 11px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: .82rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 0 60px;
+      }
+
+      h1 {
+        font-size: clamp(4rem, 23vw, 7rem);
+      }
+
+      .doors {
+        grid-template-columns: 1fr;
+      }
+
+      .door {
+        min-height: 220px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .door {
+        transition: none;
+      }
+    }
+
+  </style>
 </head>
 
+
 <body>
-  <h1>JOSIE MAKES</h1>
-  <h2>things.</h2>
 
-  <p>Data. Websites. Art. Systems. Sometimes cookies.</p>
+  <header>
+    <nav aria-label="Main navigation">
 
-  <p><em>Something interesting is being built here.</em></p>
+      <a class="logo" href="#">JOSIE MAKES</a>
+
+      <div class="nav-links">
+        <a href="#work">WORK</a>
+        <a href="#make">MAKE</a>
+        <a href="#about">ABOUT</a>
+        <a class="mystery" href="#mystery">???</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <p class="eyebrow">Hi. I'm Josie Mikita.</p>
+
+      <h1>
+        JOSIE<br>
+        <span class="makes">MAKES.</span>
+      </h1>
+
+      <p class="intro">
+        I like making things — with
+        <strong>data</strong>,
+        technology, systems, design,
+        and whatever else I need to learn along the way.
+      </p>
+
+    </section>
+
+
+    <section class="doors">
+
+      <a class="door work" id="work" href="#">
+        <div>
+          <span class="door-label">Professional-ish</span>
+          <h2>WORK</h2>
+          <p>
+            Data, analytics, technology, systems,
+            projects, and problems I figured out.
+          </p>
+        </div>
+
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+
+      <a class="door make" id="make" href="#">
+        <div>
+          <span class="door-label">Other things I've made</span>
+          <h2>MAKE</h2>
+          <p>
+            Art, design, experiments, creative projects,
+            and things that seemed like a good idea.
+          </p>
+        </div>
+
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+    </section>
+
+
+    <section class="currently">
+      <span>Currently making:</span>
+      <p>
+        This website, apparently.
+      </p>
+    </section>
+
+  </main>
+
+
+  <footer id="about">
+    <div class="footer-inner">
+      <span>© 2026 Josie Mikita</span>
+
+      <span>
+        Washington State ·
+        <a href="https://github.com/Jojomiki">GitHub</a>
+      </span>
+    </div>
+  </footer>
+
 </body>
 </html>
