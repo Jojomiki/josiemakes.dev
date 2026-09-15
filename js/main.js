@@ -43,10 +43,19 @@
    STARS
    ======================================== */
 
-document.querySelectorAll(".star-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const flipped = card.classList.toggle("is-flipped");
+function setupStarCards() {
+    const starCards = document.querySelectorAll(".star-card");
 
-    card.setAttribute("aria-pressed", flipped);
-  });
-});
+    starCards.forEach((card) => {
+        card.addEventListener("click", function () {
+            const flipped = this.classList.toggle("is-flipped");
+            this.setAttribute("aria-pressed", flipped);
+        });
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupStarCards);
+} else {
+    setupStarCards();
+}
