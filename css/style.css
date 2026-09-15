@@ -833,10 +833,22 @@ a.project-button:hover {
 /* THE GALLERY */
 
 .star-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 45px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 20px;
+}
+
+.star-card {
+  width: min(850px, 88%);
+}
+
+.star-card:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.star-card:nth-child(even) {
+  align-self: flex-end;
 }
 
 
@@ -923,9 +935,6 @@ a.project-button:hover {
 
 /* stagger the gallery because perfect grids are suspicious */
 
-.star-card:nth-child(even) {
-  margin-top: 80px;
-}
 
 
 /* MOBILE */
@@ -936,14 +945,13 @@ a.project-button:hover {
     padding-top: 50px;
   }
 
-  .star-gallery {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
+.star-gallery {
+  gap: 45px;
+}
 
-  .star-card:nth-child(even) {
-    margin-top: 0;
-  }
+.star-card {
+  width: 100%;
+}
 
  .star-face {
   grid-area: 1 / 1;
