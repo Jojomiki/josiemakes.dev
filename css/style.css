@@ -10,7 +10,7 @@
       --pink: #ff3ea5;
       --blue: #315cff;
       --lime: #c7f900;
-      --orange: #ff7a00;
+      --light blue: #9eeaff;
       --purple: #8b45ff;
 
       --border: 2px solid var(--ink);
@@ -1464,7 +1464,7 @@ a.project-button:hover {
     top: 34%;
     left: 5%;
     font-size: 2.5rem;
-    color: #ff7a00;
+    color: #9eeaff;
 }
 
 .s8 {
