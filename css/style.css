@@ -1331,3 +1331,54 @@ a.project-button:hover {
 
 }
 
+/* ========================================
+   PLAY AFTER DARK
+   ======================================== */
+
+.play-page {
+    background: #111016;
+    color: #fff7fc;
+}
+
+.play-page header {
+    background: #111016;
+    border-color: #fff7fc;
+}
+
+.play-page nav a {
+    color: #fff7fc;
+}
+
+.play-page .logo {
+    color: #fff7fc;
+}
+
+.play-page .eyebrow {
+    color: #d7ff45;
+}
+
+.play-page .play-title {
+    color: #fff7fc;
+}
+
+.play-page .play-star {
+    color: #ff3ea5;
+}
+
+.play-page .play-lede {
+    color: #fff7fc;
+}
+
+.play-page .play-sublede {
+    color: #ffb3e6;
+}
+
+.play-page footer {
+    background: #111016;
+    color: #fff7fc;
+    border-color: #fff7fc;
+}
+
+.play-page footer a {
+    color: #d7ff45;
+}
