@@ -1,9 +1,13 @@
 /* ========================================
+   JOSIE MAKES — MAIN JAVASCRIPT
+   ======================================== */
+
+
+/* ========================================
    HOMEPAGE VERB SWITCHER
    ======================================== */
 
 function setupVerbSwitcher() {
-
     const verbs = [
         "MAKES",
         "BUILDS",
@@ -27,12 +31,12 @@ function setupVerbSwitcher() {
     const verbButton = document.getElementById("verbButton");
     const verb = document.getElementById("verb");
 
+    // Not the homepage? Nothing to do.
     if (!verbButton || !verb) return;
 
     let verbIndex = 0;
 
-    function changeVerb() {
-
+    verbButton.addEventListener("click", () => {
         verbIndex = (verbIndex + 1) % verbs.length;
 
         verb.textContent = verbs[verbIndex];
@@ -41,37 +45,26 @@ function setupVerbSwitcher() {
             colors[Math.floor(Math.random() * colors.length)];
 
         verb.style.color = randomColor;
-    }
-
-    verbButton.addEventListener("click", changeVerb);
+    });
 }
 
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupVerbSwitcher);
-} else {
-    setupVerbSwitcher();
-}
 /* ========================================
-   STARS
+   STAR CARD FLIPS
    ======================================== */
 
 function setupStarCards() {
     const starCards = document.querySelectorAll(".star-card");
 
     starCards.forEach((card) => {
-        card.addEventListener("click", function () {
-            const flipped = this.classList.toggle("is-flipped");
-            this.setAttribute("aria-pressed", flipped);
+        card.addEventListener("click", () => {
+            const flipped = card.classList.toggle("is-flipped");
+            card.setAttribute("aria-pressed", flipped);
         });
     });
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupStarCards);
-} else {
-    setupStarCards();
-}
+
 /* ========================================
    GLITTER CRIMES
    ======================================== */
@@ -81,6 +74,7 @@ const sparkleSymbols = [
     "★", "✧", "⋆",
     "★", "✶", "✷"
 ];
+
 const sparkleColors = [
     "#ff2fa8", // electric pink
     "#ff71c8", // bubblegum
@@ -97,6 +91,7 @@ const sparkleColors = [
     "#ffffff"  // actual starlight
 ];
 
+
 function makeSparkleBurst(x, y, amount = 8) {
     const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -108,14 +103,19 @@ function makeSparkleBurst(x, y, amount = 8) {
         const sparkle = document.createElement("span");
 
         sparkle.className = "click-sparkle";
+
         sparkle.textContent =
-            sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+            sparkleSymbols[
+                Math.floor(Math.random() * sparkleSymbols.length)
+            ];
 
         sparkle.style.left = `${x}px`;
         sparkle.style.top = `${y}px`;
 
         sparkle.style.color =
-            sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+            sparkleColors[
+                Math.floor(Math.random() * sparkleColors.length)
+            ];
 
         const angle = Math.random() * Math.PI * 2;
         const distance = 45 + Math.random() * 140;
@@ -135,19 +135,18 @@ function makeSparkleBurst(x, y, amount = 8) {
             `${Math.random() * 360 - 180}deg`
         );
 
-const sizeRoll = Math.random();
+        const sizeRoll = Math.random();
+        let size;
 
-let size;
+        if (sizeRoll < 0.55) {
+            size = 6 + Math.random() * 10;
+        } else if (sizeRoll < 0.9) {
+            size = 16 + Math.random() * 18;
+        } else {
+            size = 34 + Math.random() * 22;
+        }
 
-if (sizeRoll < 0.55) {
-    size = 6 + Math.random() * 10;
-} else if (sizeRoll < 0.9) {
-    size = 16 + Math.random() * 18;
-} else {
-    size = 34 + Math.random() * 22;
-}
-
-sparkle.style.fontSize = `${size}px`;
+        sparkle.style.fontSize = `${size}px`;
 
         document.body.appendChild(sparkle);
 
@@ -158,21 +157,53 @@ sparkle.style.fontSize = `${size}px`;
 }
 
 
-/* sparkle when artwork flips */
+/* ========================================
+   STAR GLITTER
+   ======================================== */
 
-document.querySelectorAll(".star-card").forEach((card) => {
-    card.addEventListener("pointerdown", (event) => {
-        makeSparkleBurst(event.clientX, event.clientY, 13);
+function setupStarGlitter() {
+    const starCards = document.querySelectorAll(".star-card");
+
+    starCards.forEach((card) => {
+        card.addEventListener("pointerdown", (event) => {
+            makeSparkleBurst(
+                event.clientX,
+                event.clientY,
+                13
+            );
+        });
     });
-});
+
+    // The big STAR has absolutely no adult supervision.
+    const titleStar = document.querySelector(".star-title");
+
+    if (titleStar) {
+        titleStar.addEventListener("pointerdown", (event) => {
+            makeSparkleBurst(
+                event.clientX,
+                event.clientY,
+                84
+            );
+        });
+    }
+}
 
 
-/* THE BIG STAR HAS NO ADULT SUPERVISION */
+/* ========================================
+   START EVERYTHING
+   ======================================== */
 
-const titleStar = document.querySelector(".star-title");
+function initializeJosieMakes() {
+    setupVerbSwitcher();
+    setupStarCards();
+    setupStarGlitter();
+}
 
-if (titleStar) {
-    titleStar.addEventListener("pointerdown", (event) => {
-        makeSparkleBurst(event.clientX, event.clientY, 84);
-    });
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializeJosieMakes
+    );
+} else {
+    initializeJosieMakes();
 }
