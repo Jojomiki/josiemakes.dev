@@ -1382,3 +1382,123 @@ a.project-button:hover {
 .play-page footer a {
     color: #d7ff45;
 }
+/* ========================================
+   PLAY: TASTEFUL VANDALISM
+   ======================================== */
+
+.play-page {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.play-sky {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.play-page main {
+    position: relative;
+    z-index: 1;
+}
+
+.sky-star {
+    position: absolute;
+    line-height: 1;
+    user-select: none;
+    opacity: 0.9;
+}
+
+/* RIGHT-SIDE CONSTELLATION */
+
+.s1 {
+    top: 11%;
+    right: 9%;
+    font-size: 5rem;
+    color: #ff3ea5;
+    transform: rotate(12deg);
+}
+
+.s2 {
+    top: 19%;
+    right: 21%;
+    font-size: 2.3rem;
+    color: #c7f900;
+}
+
+.s3 {
+    top: 29%;
+    right: 6%;
+    font-size: 3.4rem;
+    color: #8b45ff;
+    transform: rotate(-15deg);
+}
+
+.s4 {
+    top: 38%;
+    right: 17%;
+    font-size: 1.7rem;
+    color: #45caff;
+}
+
+.s5 {
+    top: 48%;
+    right: 4%;
+    font-size: 6rem;
+    color: #315cff;
+    opacity: 0.7;
+}
+
+.s6 {
+    top: 57%;
+    right: 23%;
+    font-size: 3rem;
+    color: #ff71c8;
+}
+
+/* A LITTLE CHAOS ON THE LEFT */
+
+.s7 {
+    top: 34%;
+    left: 5%;
+    font-size: 2.5rem;
+    color: #ff7a00;
+}
+
+.s8 {
+    top: 53%;
+    left: 8%;
+    font-size: 4rem;
+    color: #ff3ea5;
+    opacity: 0.7;
+}
+
+.s9 {
+    top: 68%;
+    right: 11%;
+    font-size: 2rem;
+    color: #c7f900;
+}
+
+.s10 {
+    top: 75%;
+    left: 4%;
+    font-size: 2rem;
+    color: #8b45ff;
+}
+
+.s11 {
+    top: 82%;
+    right: 27%;
+    font-size: 3.5rem;
+    color: #ff3ea5;
+}
+
+.s12 {
+    top: 88%;
+    right: 7%;
+    font-size: 4rem;
+    color: #45caff;
+}
