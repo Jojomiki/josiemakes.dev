@@ -1801,3 +1801,196 @@ a.project-button:hover {
         transform: none;
     }
 }
+
+/* ========================================
+   WORK HISTORY + CREDENTIALS
+   ======================================== */
+
+.work-history {
+    margin: 0 0 6rem;
+}
+
+
+/* ---------- EXPERIENCE HEADING ---------- */
+
+.history-heading {
+    margin-bottom: 2.5rem;
+}
+
+.history-heading h2,
+.credentials-heading h2 {
+    margin: 0.25rem 0 0;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+
+/* ---------- EXPERIENCE LIST ---------- */
+
+.history-list {
+    border-top: var(--border);
+}
+
+.history-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+
+    padding: 2rem 0;
+    border-bottom: var(--border);
+}
+
+.history-label span {
+    display: inline-block;
+
+    padding: 0.45rem 0.7rem;
+
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+
+    background: #dce5ff;
+
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.history-item:nth-child(2) .history-label span {
+    background: #ffd6ec;
+}
+
+.history-item:nth-child(3) .history-label span {
+    background: #eadcff;
+}
+
+.history-item:nth-child(4) .history-label span {
+    background: #efffb0;
+}
+
+.history-copy h3 {
+    margin: 0 0 0.65rem;
+
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+.history-copy p {
+    max-width: 680px;
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+
+/* ---------- CREDENTIALS ---------- */
+
+.credentials {
+    margin-top: 6rem;
+}
+
+.credentials-heading {
+    margin-bottom: 2.5rem;
+}
+
+.credential-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.credential {
+    grid-column: span 2;
+
+    padding: 1.5rem;
+
+    border: var(--border);
+    border-radius: 20px;
+
+    background: #fffafd;
+}
+
+.credential:nth-child(1),
+.credential:nth-child(2) {
+    grid-column: span 3;
+}
+
+.credential span {
+    display: block;
+    margin-bottom: 1rem;
+
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.credential strong {
+    display: block;
+
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.credential p {
+    margin: 0.65rem 0 0;
+
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+
+/* candy, but employed */
+
+.credential:nth-child(1) {
+    box-shadow: 5px 5px 0 var(--blue);
+}
+
+.credential:nth-child(2) {
+    box-shadow: 5px 5px 0 var(--pink);
+}
+
+.credential:nth-child(3) {
+    box-shadow: 5px 5px 0 var(--purple);
+}
+
+.credential:nth-child(4) {
+    box-shadow: 5px 5px 0 var(--lime);
+}
+
+.credential:nth-child(5) {
+    box-shadow: 5px 5px 0 #9eeaff;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 760px) {
+
+    .work-history {
+        margin-bottom: 4rem;
+    }
+
+    .history-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.6rem 0;
+    }
+
+    .credentials {
+        margin-top: 4rem;
+    }
+
+    .credential-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credential,
+    .credential:nth-child(1),
+    .credential:nth-child(2) {
+        grid-column: auto;
+    }
+}
