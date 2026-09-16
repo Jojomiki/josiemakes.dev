@@ -1,44 +1,57 @@
+/* ========================================
+   HOMEPAGE VERB SWITCHER
+   ======================================== */
+
+function setupVerbSwitcher() {
 
     const verbs = [
-      "MAKES",
-      "BUILDS",
-      "CREATES",
-      "LEARNS",
-      "ANALYZES",
-      "DESIGNS",
-      "BAKES",
-      "PAINTS",
-      "FIGURES IT OUT"
+        "MAKES",
+        "BUILDS",
+        "CREATES",
+        "LEARNS",
+        "ANALYZES",
+        "DESIGNS",
+        "BAKES",
+        "PAINTS",
+        "FIGURES IT OUT"
     ];
 
     const colors = [
-      "#ff3ea5",
-      "#315cff",
-      "#8b45ff",
-      "#ff7a00",
-      "#c7f900"
+        "#ff3ea5",
+        "#315cff",
+        "#8b45ff",
+        "#ff7a00",
+        "#c7f900"
     ];
 
     const verbButton = document.getElementById("verbButton");
     const verb = document.getElementById("verb");
 
+    if (!verbButton || !verb) return;
+
     let verbIndex = 0;
 
     function changeVerb() {
-      verbIndex = (verbIndex + 1) % verbs.length;
 
-      verb.textContent = verbs[verbIndex];
+        verbIndex = (verbIndex + 1) % verbs.length;
 
-      const randomColor =
-        colors[Math.floor(Math.random() * colors.length)];
+        verb.textContent = verbs[verbIndex];
 
-      verb.style.color = randomColor;
+        const randomColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        verb.style.color = randomColor;
     }
 
- if (verbButton && verb) {
     verbButton.addEventListener("click", changeVerb);
 }
 
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupVerbSwitcher);
+} else {
+    setupVerbSwitcher();
+}
 /* ========================================
    STARS
    ======================================== */
