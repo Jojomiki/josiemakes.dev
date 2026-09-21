@@ -2382,3 +2382,142 @@ a.project-button:hover {
         transition: none;
     }
 }
+/* =========================================================
+   STARS — CELESTIAL TYPOGRAPHY
+   ========================================================= */
+
+
+/* ---------- DELICATE ASCII CONSTELLATION ---------- */
+
+.stars-page .ascii-stars {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Courier New", monospace;
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+
+    color: rgba(248, 245, 255, 0.82);
+    background: transparent;
+
+    text-shadow:
+        0 0 8px rgba(201, 167, 255, 0.35);
+
+    white-space: pre;
+    overflow: visible;
+}
+
+.stars-page .ascii-top {
+    margin-bottom: 0.4rem;
+}
+
+.stars-page .ascii-bottom {
+    margin-top: 0.4rem;
+}
+
+
+/* ---------- THE BIG CELESTIAL ONE ---------- */
+
+.stars-page .celestial-title {
+    margin: 0;
+
+    font-family: "Megrim", sans-serif;
+    font-size: clamp(6rem, 15vw, 11rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 0.03em;
+
+    color: #f8f5ff;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.18),
+        0 0 24px rgba(201,167,255,0.14);
+}
+
+.stars-page .celestial-title .star-title {
+    color: #ff3ea5;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.55em;
+
+    vertical-align: 0.2em;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 12px rgba(255,62,165,0.40),
+        0 0 30px rgba(255,62,165,0.18);
+}
+
+
+/* ---------- THE STORY ---------- */
+
+.stars-page .stars-story p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    font-weight: 500;
+    line-height: 1.55;
+
+    color: rgba(248, 245, 255, 0.88);
+
+    max-width: 720px;
+}
+
+
+/* ---------- EMPHASIS INSIDE THE STORY ---------- */
+
+.stars-page .stars-story strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+/* shimmer keeps the celestial serif shape */
+
+.stars-page .cosmic-shimmer {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 700;
+}
+
+
+/* ---------- THREE P's ---------- */
+
+.stars-page .three-p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* ---------- BIG STARDUST ENDING ---------- */
+
+.stars-page .stardust-statement {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+}
+
+
+/* ---------- FUNCTIONAL STUFF STAYS CLEAN ---------- */
+
+.stars-page .eyebrow,
+.stars-page .back-link,
+.stars-page .flip-instruction {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .stars-page .celestial-title {
+        font-size: clamp(4.5rem, 22vw, 7rem);
+    }
+
+    .stars-page .ascii-stars {
+        font-size: 0.7rem;
+    }
+}
