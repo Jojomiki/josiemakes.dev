@@ -289,3 +289,70 @@ if (document.readyState === "loading") {
 } else {
     setupThreePs();
 }
+
+
+/* =========================================================
+   STARS — MULTI-PAGE ARTWORKS
+   ========================================================= */
+
+function setupMultipageArtwork() {
+
+    const artworks = document.querySelectorAll(".star-multipage");
+
+    artworks.forEach((artwork) => {
+
+        const button = artwork.querySelector(".multipage-art");
+        const pages = artwork.querySelectorAll(".multipage-page");
+        const dots = artwork.querySelectorAll(".multipage-dots span");
+
+        if (!button || pages.length === 0) return;
+
+        let currentPage = 0;
+
+        button.addEventListener("click", (event) => {
+
+            currentPage = (currentPage + 1) % pages.length;
+
+            pages.forEach((page, index) => {
+                page.classList.toggle(
+                    "is-active",
+                    index === currentPage
+                );
+            });
+
+            dots.forEach((dot, index) => {
+
+                const active = index === currentPage;
+
+                dot.classList.toggle(
+                    "is-active",
+                    active
+                );
+
+                dot.textContent = active ? "✦" : "·";
+            });
+
+            /* same glitter crime as the flip cards */
+            if (typeof makeSparkleBurst === "function") {
+                makeSparkleBurst(
+                    event.clientX,
+                    event.clientY,
+                    13
+                );
+            }
+        });
+    });
+}
+
+
+if (document.readyState === "loading") {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        setupMultipageArtwork
+    );
+
+} else {
+
+    setupMultipageArtwork();
+}
