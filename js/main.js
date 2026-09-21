@@ -207,3 +207,85 @@ if (document.readyState === "loading") {
 } else {
     initializeJosieMakes();
 }
+
+
+/* =========================================================
+   STARS — THREE P's
+   ========================================================= */
+
+function setupThreePs() {
+
+    /* -------------------------
+       PERSPECTIVE
+       ------------------------- */
+
+    const perspective = document.querySelector(".perspective-word");
+
+    if (perspective) {
+
+        const perspectives = [
+            "perspective-normal",
+            "perspective-tiny",
+            "perspective-huge",
+            "perspective-far"
+        ];
+
+        let perspectiveIndex = 0;
+
+        perspective.addEventListener("click", () => {
+
+            perspective.classList.remove(...perspectives);
+
+            perspectiveIndex =
+                (perspectiveIndex + 1) % perspectives.length;
+
+            perspective.classList.add(
+                perspectives[perspectiveIndex]
+            );
+        });
+    }
+
+
+    /* -------------------------
+       PURPOSE
+       ------------------------- */
+
+    const purpose = document.querySelector(".purpose-word");
+    const purposeText = document.querySelector(".purpose-text");
+
+    if (purpose && purposeText) {
+
+        const messages = [
+            "PURPOSE.",
+            "PURPOSE?",
+            "YOU DECIDE. ✦"
+        ];
+
+        let purposeIndex = 0;
+
+        purpose.addEventListener("click", () => {
+
+            purposeIndex =
+                (purposeIndex + 1) % messages.length;
+
+            purposeText.textContent =
+                messages[purposeIndex];
+
+            purpose.classList.remove("purpose-reveal");
+
+            void purpose.offsetWidth;
+
+            purpose.classList.add("purpose-reveal");
+        });
+    }
+}
+
+
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        setupThreePs
+    );
+} else {
+    setupThreePs();
+}
