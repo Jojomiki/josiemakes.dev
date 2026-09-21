@@ -2074,4 +2074,41 @@ a.project-button:hover {
     z-index: 1;
 }
 
+/* =========================================================
+   STARS — FLOATING STICKY HEADER
+   ========================================================= */
 
+.stars-page header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    background: rgba(7, 7, 11, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.stars-page header nav {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.stars-page header .logo,
+.stars-page header .nav-links a {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.stars-page header .logo:hover,
+.stars-page header .nav-links a:hover {
+    color: #ffffff;
+}
+
+.stars-page header .nav-links .active {
+    color: #c9a7ff;
+}
+
+.stars-page header .mystery {
+    color: #9eeaff;
+}
