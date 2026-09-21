@@ -2862,14 +2862,15 @@ a.project-button:hover {
    --------------------------------------------------------- */
 
 .stars-page .kalpana-piece {
-    width: min(92vw, 1200px);
+    width: min(140vw, 1400px);
+    max-width: none;
 
-    /* escape the narrower gallery column */
-    margin-left: 50%;
+    position: relative;
+    left: 50%;
     transform: translateX(-50%);
 
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 
 
