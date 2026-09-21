@@ -2956,3 +2956,84 @@ a.project-button:hover {
 .stars-page .three-p .possibility-word span {
     margin-right: -0.02em;
 }
+
+
+
+/* =========================================================
+   PERSPECTIVE — CHANGE YOUR PERSPECTIVE
+   ========================================================= */
+
+.stars-page .perspective-word {
+    transform-origin: left center;
+
+    transition:
+        transform 600ms ease,
+        opacity 600ms ease,
+        letter-spacing 600ms ease,
+        color 400ms ease;
+}
+
+
+/* tiny / distant */
+
+.stars-page .perspective-word.perspective-tiny {
+    transform: scale(.35);
+    opacity: .55;
+    letter-spacing: .3em;
+}
+
+
+/* OH HELLO */
+
+.stars-page .perspective-word.perspective-huge {
+    transform: scale(1.65);
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(201,167,255,.45),
+        0 0 40px rgba(158,234,255,.20);
+}
+
+
+/* shifted / strange */
+
+.stars-page .perspective-word.perspective-far {
+    transform:
+        translateX(45%)
+        scale(.7);
+
+    opacity: .7;
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   PURPOSE — EXISTENTIAL BUTTON
+   ========================================================= */
+
+.stars-page .purpose-word {
+    transition:
+        color 400ms ease,
+        letter-spacing 500ms ease,
+        transform 500ms ease,
+        text-shadow 500ms ease;
+}
+
+.stars-page .purpose-word.purpose-reveal {
+    animation: purpose-arrives 650ms ease;
+}
+
+@keyframes purpose-arrives {
+
+    0% {
+        opacity: 0;
+        transform: translateY(.35em);
+        filter: blur(7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
