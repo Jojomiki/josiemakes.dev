@@ -2112,3 +2112,273 @@ a.project-button:hover {
 .stars-page header .mystery {
     color: #9eeaff;
 }
+
+/* =========================================================
+   STARS — ARTIST STATEMENT + ASCII UNIVERSE
+   ========================================================= */
+
+
+/* ---------- INTRO LAYOUT ---------- */
+
+.stars-page .stars-intro {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+}
+
+.stars-page .stars-story {
+    max-width: 760px;
+    margin-top: 3rem;
+}
+
+.stars-page .stars-story p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.75;
+    margin: 0 0 1.75rem;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* ---------- ASCII STARS TITLE ---------- */
+
+.stars-title-art {
+    margin: 1.25rem 0 2.5rem;
+    overflow: visible;
+}
+
+.stars-title-art pre {
+    display: inline-block;
+    margin: 0;
+
+    font-family: "Space Grotesk", monospace;
+    font-size: clamp(1.25rem, 3.2vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 0.08em;
+
+    color: #f9f6ff;
+    background: transparent;
+
+    overflow: visible;
+    white-space: pre;
+
+    text-shadow:
+        0 0 12px rgba(201, 167, 255, 0.22),
+        0 0 28px rgba(158, 234, 255, 0.10);
+}
+
+
+/* ---------- GLITTERY IMPOSSIBLE BEAUTY ---------- */
+
+.cosmic-shimmer {
+    position: relative;
+    display: inline;
+    font-weight: 700;
+
+    background: linear-gradient(
+        110deg,
+        #ffffff 0%,
+        #ffffff 30%,
+        #9eeaff 42%,
+        #c9a7ff 49%,
+        #ff71c8 55%,
+        #ffffff 68%,
+        #ffffff 100%
+    );
+
+    background-size: 250% auto;
+    background-position: 100% center;
+
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    transition:
+        background-position 900ms ease,
+        text-shadow 500ms ease;
+}
+
+.cosmic-shimmer:hover {
+    background-position: 0% center;
+
+    text-shadow:
+        0 0 8px rgba(158, 234, 255, 0.35),
+        0 0 14px rgba(201, 167, 255, 0.28),
+        0 0 20px rgba(255, 113, 200, 0.20);
+}
+
+
+/* ---------- THE UNSEEN ---------- */
+
+.unseen-question {
+    position: relative;
+    display: block;
+
+    min-height: 3rem;
+    margin: 2.75rem 0 3rem;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #ffffff;
+    font: inherit;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 700;
+
+    cursor: pointer;
+    text-align: left;
+}
+
+.unseen-visible,
+.unseen-reveal {
+    transition:
+        opacity 450ms ease,
+        filter 600ms ease,
+        letter-spacing 600ms ease;
+}
+
+.unseen-visible {
+    opacity: 1;
+}
+
+.unseen-reveal {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    color: #9eeaff;
+
+    letter-spacing: 0.15em;
+    text-shadow:
+        0 0 10px rgba(158, 234, 255, 0.45),
+        0 0 25px rgba(201, 167, 255, 0.25);
+}
+
+.unseen-question:hover .unseen-visible,
+.unseen-question:focus-visible .unseen-visible {
+    opacity: 0;
+    filter: blur(7px);
+    letter-spacing: 0.12em;
+}
+
+.unseen-question:hover .unseen-reveal,
+.unseen-question:focus-visible .unseen-reveal {
+    opacity: 1;
+    letter-spacing: 0.25em;
+}
+
+
+/* ---------- POSSIBILITY / PERSPECTIVE / PURPOSE ---------- */
+
+.three-p {
+    margin: 3.5rem 0 !important;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    line-height: 1.05 !important;
+}
+
+.three-p span {
+    display: block;
+    font-size: clamp(2rem, 5vw, 4.75rem);
+}
+
+.three-p span:nth-child(1) {
+    color: #ff71c8;
+}
+
+.three-p span:nth-child(2) {
+    color: #c9a7ff;
+    margin-left: 8%;
+}
+
+.three-p span:nth-child(3) {
+    color: #9eeaff;
+    margin-left: 16%;
+}
+
+
+/* ---------- STARDUST ENDING ---------- */
+
+.stardust-statement {
+    margin: 4rem 0 !important;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3.5rem) !important;
+    font-weight: 700;
+    line-height: 1.1 !important;
+
+    color: #ffffff !important;
+}
+
+.stardust-statement span {
+    display: block;
+
+    color: #c9a7ff;
+
+    text-shadow:
+        0 0 15px rgba(201, 167, 255, 0.18);
+}
+
+
+/* ---------- SOMEDAY ---------- */
+
+.stars-page .stars-someday {
+    margin-top: 3rem !important;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-style: italic;
+    font-size: 1rem !important;
+
+    color: rgba(255, 255, 255, 0.58) !important;
+}
+
+
+/* ---------- FLIP INSTRUCTION ---------- */
+
+.stars-page .flip-instruction {
+    margin-top: 4rem;
+
+    color: #d7ff45;
+
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .stars-page .stars-intro {
+        padding: 3rem 1.25rem 4rem;
+    }
+
+    .stars-title-art pre {
+        font-size: clamp(0.9rem, 4vw, 1.4rem);
+    }
+
+    .three-p span:nth-child(2),
+    .three-p span:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .three-p span {
+        margin-bottom: 0.3rem;
+    }
+}
+
+
+/* ---------- DON'T MAKE PEOPLE SICK ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cosmic-shimmer,
+    .unseen-visible,
+    .unseen-reveal {
+        transition: none;
+    }
+}
