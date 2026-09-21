@@ -2945,3 +2945,14 @@ a.project-button:hover {
         margin-left: 0;
     }
 }
+
+
+
+.stars-page .three-p .possibility-word {
+    gap: 0;
+    letter-spacing: 0;
+}
+
+.stars-page .three-p .possibility-word span {
+    margin-right: -0.02em;
+}
