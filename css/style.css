@@ -3370,3 +3370,112 @@ a.project-button:hover {
         padding-top: 5rem;
     }
 }
+/* =========================================================
+   STARS — GALLERY GEOMETRY RESET
+   ========================================================= */
+
+.stars-page .star-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    gap: 4rem;
+}
+
+
+/* NORMAL FLIP CARDS */
+
+.stars-page .star-card {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: block;
+    position: relative;
+
+    width: min(100%, 900px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    perspective: 1600px;
+}
+
+
+/* this is the actual flipping object */
+
+.stars-page .star-card-inner {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+
+    transition: transform 700ms ease;
+}
+
+
+/* flip */
+
+.stars-page .star-card.is-flipped .star-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* BOTH SIDES */
+
+.stars-page .star-face {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    background: #07070b;
+}
+
+
+/* backside */
+
+.stars-page .star-back {
+    transform: rotateY(180deg);
+}
+
+
+/* THE ACTUAL ART */
+
+.stars-page .star-face > img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: inherit;
+}
