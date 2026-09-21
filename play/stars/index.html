@@ -340,31 +340,47 @@
   </button>
 
 
-  <!-- KALPANA CHAWLA — TRIPTYCH FRONT -->
-  <button class="star-card special-card kalpana-card"
-          type="button"
-          aria-label="Flip the Kalpana Chawla triptych"
-          aria-pressed="false">
-    <span class="star-card-inner">
+<!-- KALPANA CHAWLA — TRIPTYCH + REVEAL -->
+<div class="kalpana-piece">
 
-      <span class="star-face star-front kalpana-triptych">
-        <img src="/images/stars/KalpanaLeft.png"
-             alt="Left panel of the Kalpana Chawla artwork">
+    <div class="kalpana-triptych">
 
-        <img src="/images/stars/KalpanaCenter.png"
-             alt="Center quote panel of the Kalpana Chawla artwork">
+        <div class="kalpana-panel">
+            <img src="/images/stars/KalpanaLeft.png"
+                 alt="Left panel of the Kalpana Chawla artwork">
+        </div>
 
-        <img src="/images/stars/KalpanaRight.png"
-             alt="Right panel of the Kalpana Chawla artwork">
-      </span>
+        <button class="kalpana-panel kalpana-center"
+                type="button"
+                aria-expanded="false"
+                aria-controls="kalpana-info">
+            <img src="/images/stars/KalpanaCenter.png"
+                 alt="Center quote panel of the Kalpana Chawla artwork">
 
-      <span class="star-face star-back">
-        <img src="/images/stars/Kalpana2.png"
-             alt="Companion page for the Kalpana Chawla artwork">
-      </span>
+            <span class="kalpana-hint" aria-hidden="true">
+                ✦
+            </span>
+        </button>
 
-    </span>
-  </button>
+        <div class="kalpana-panel">
+            <img src="/images/stars/KalpanaRight.png"
+                 alt="Right panel of the Kalpana Chawla artwork">
+        </div>
+
+    </div>
+
+    <div class="kalpana-reveal"
+         id="kalpana-info"
+         aria-hidden="true">
+
+        <div class="kalpana-info-inner">
+            <img src="/images/stars/Kalpana2.png"
+                 alt="Companion information page for the Kalpana Chawla artwork">
+        </div>
+
+    </div>
+
+</div>
 
 
   <!-- MAE JEMISON -->
