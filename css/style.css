@@ -2862,17 +2862,17 @@ a.project-button:hover {
    --------------------------------------------------------- */
 
 .stars-page .kalpana-piece {
-    width: min(140vw, 1400px);
+    width: min(92vw, 1400px);
     max-width: none;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    align-self: center;
 
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+    position: static;
+    left: auto;
+    transform: none;
+
+    margin: 3rem 0 6rem;
 }
-
 
 /* THE THREE WINDOWS */
 
