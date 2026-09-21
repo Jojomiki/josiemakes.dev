@@ -2029,6 +2029,7 @@ a.project-button:hover {
 }
 
 /* tiny distant stars */
+/* scattered distant stars — deliberately irregular */
 .stars-page::before {
     content: "";
     position: fixed;
@@ -2037,23 +2038,34 @@ a.project-button:hover {
     z-index: 0;
 
     background-image:
-        radial-gradient(circle, rgba(255,255,255,.85) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(201,167,255,.7) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(158,234,255,.6) 0 1px, transparent 1.5px);
+        radial-gradient(circle at 4% 8%,  #fff 0 1px, transparent 1.6px),
+        radial-gradient(circle at 11% 29%, #9eeaff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 17% 13%, #fff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 23% 61%, #c9a7ff 0 1px, transparent 1.6px),
+        radial-gradient(circle at 29% 22%, #fff 0 0.7px, transparent 1.3px),
+        radial-gradient(circle at 35% 78%, #9eeaff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 42% 7%,  #fff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 48% 47%, #c9a7ff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 55% 18%, #fff 0 0.7px, transparent 1.3px),
+        radial-gradient(circle at 61% 69%, #9eeaff 0 1px, transparent 1.6px),
+        radial-gradient(circle at 68% 35%, #fff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 74% 86%, #c9a7ff 0 1px, transparent 1.6px),
+        radial-gradient(circle at 81% 11%, #fff 0 0.7px, transparent 1.3px),
+        radial-gradient(circle at 87% 54%, #9eeaff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 93% 24%, #fff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 97% 76%, #c9a7ff 0 1px, transparent 1.6px),
 
-    background-size:
-        137px 137px,
-        211px 211px,
-        293px 293px;
+        radial-gradient(circle at 7% 72%,  #fff 0 0.7px, transparent 1.2px),
+        radial-gradient(circle at 19% 91%, #fff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 32% 39%, #9eeaff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 46% 94%, #fff 0 0.7px, transparent 1.3px),
+        radial-gradient(circle at 58% 52%, #fff 0 1px, transparent 1.5px),
+        radial-gradient(circle at 71% 4%,  #c9a7ff 0 0.8px, transparent 1.4px),
+        radial-gradient(circle at 84% 73%, #fff 0 0.7px, transparent 1.3px),
+        radial-gradient(circle at 95% 93%, #9eeaff 0 1px, transparent 1.5px);
 
-    background-position:
-        17px 31px,
-        83px 109px,
-        151px 47px;
-
-    opacity: .45;
+    opacity: .5;
 }
-
 /* keep the actual page above space */
 .stars-page header,
 .stars-page main,
