@@ -356,3 +356,34 @@ if (document.readyState === "loading") {
 
     setupMultipageArtwork();
 }
+
+
+/* =========================================================
+   KALPANA CHAWLA
+   The middle window contains additional universe.
+   ========================================================= */
+
+function setupKalpanaReveal() {
+    const button = document.querySelector(".kalpana-center");
+    const reveal = document.querySelector(".kalpana-reveal");
+
+    if (!button || !reveal) return;
+
+    button.addEventListener("click", (event) => {
+        const isOpen = reveal.classList.toggle("is-open");
+
+        button.setAttribute("aria-expanded", isOpen);
+        reveal.setAttribute("aria-hidden", !isOpen);
+
+        if (typeof makeSparkleBurst === "function") {
+            makeSparkleBurst(event.clientX, event.clientY, 18);
+        }
+    });
+}
+
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupKalpanaReveal);
+} else {
+    setupKalpanaReveal();
+}
