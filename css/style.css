@@ -2385,7 +2385,53 @@ a.project-button:hover {
 /* =========================================================
    STARS — CELESTIAL TYPOGRAPHY
    ========================================================= */
+/* =========================================================
+   STARS — LET THE WORDS FLOAT
+   ========================================================= */
 
+.stars-page .stars-story {
+    max-width: 760px;
+    margin-top: 6rem;
+}
+
+/* more space between individual thoughts */
+.stars-page .stars-story > p {
+    margin-bottom: 2.75rem;
+}
+
+/* first paragraph gets to introduce the whole thing */
+.stars-page .stars-story > p:first-child {
+    max-width: 680px;
+}
+
+/* "And we're here..." drifts inward a little */
+.stars-page .stars-story > p:nth-child(2) {
+    max-width: 620px;
+    margin-left: 7%;
+}
+
+/* technology / unseen paragraph */
+.stars-page .stars-story > p:nth-child(3) {
+    max-width: 650px;
+}
+
+
+/* make the secret question feel isolated */
+.stars-page .unseen-question {
+    margin-top: 4.5rem;
+    margin-bottom: 5rem;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+    font-weight: 600;
+}
+
+
+/* give the title constellation more breathing room */
+.stars-page .stars-title-art {
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+}
 
 /* ---------- DELICATE ASCII CONSTELLATION ---------- */
 
