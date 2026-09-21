@@ -2862,8 +2862,14 @@ a.project-button:hover {
    --------------------------------------------------------- */
 
 .stars-page .kalpana-piece {
-    width: min(96vw, 1200px);
-    margin: 1rem auto 5rem;
+    width: min(92vw, 1200px);
+
+    /* escape the narrower gallery column */
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 
