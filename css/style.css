@@ -1993,4 +1993,73 @@ a.project-button:hover {
     .credential:nth-child(2) {
         grid-column: auto;
     }
+}/* =========================================================
+   STARS — DEEP SPACE BACKGROUND
+   ========================================================= */
+
+.stars-page {
+    background:
+        radial-gradient(
+            ellipse at 12% 18%,
+            rgba(69, 93, 255, 0.13) 0%,
+            rgba(69, 93, 255, 0.05) 16%,
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 88% 32%,
+            rgba(170, 76, 255, 0.12) 0%,
+            rgba(170, 76, 255, 0.04) 18%,
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 35% 72%,
+            rgba(255, 62, 165, 0.07) 0%,
+            transparent 34%
+        ),
+        radial-gradient(
+            ellipse at 78% 88%,
+            rgba(85, 205, 255, 0.08) 0%,
+            transparent 32%
+        ),
+        #07070b;
+
+    color: #f8f5ff;
+    min-height: 100vh;
+    position: relative;
 }
+
+/* tiny distant stars */
+.stars-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.85) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(201,167,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(158,234,255,.6) 0 1px, transparent 1.5px);
+
+    background-size:
+        137px 137px,
+        211px 211px,
+        293px 293px;
+
+    background-position:
+        17px 31px,
+        83px 109px,
+        151px 47px;
+
+    opacity: .45;
+}
+
+/* keep the actual page above space */
+.stars-page header,
+.stars-page main,
+.stars-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+
