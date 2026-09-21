@@ -1,5 +1,31 @@
+/* =========================================================
+   JOSIE MAKES — MASTER STYLESHEET
+   =========================================================
 
-    :root {
+   INTERNET CANDY IN A SUIT™
+
+   TABLE OF CONTENTS
+   01. Foundations + shared navigation
+   02. Home
+   03. Work
+   04. Play
+   05. Stars: deep space + story
+   06. Stars: interactive words + glitter crimes
+   07. Stars: gallery + special artwork
+   08. Stars: end of the universe
+   09. The gravestone
+
+   Design law:
+   Clean first. Weird on purpose. The deeper you go, the stranger it gets.
+   ========================================================= */
+
+
+/* =========================================================
+   01 — FOUNDATIONS + HOME
+   Professional enough to get hired. Suspicious enough to be Josie.
+   ========================================================= */
+
+:root {
       --ink: #18151c;
 
       /* cousins with white */
@@ -10,8 +36,11 @@
       --pink: #ff3ea5;
       --blue: #315cff;
       --lime: #c7f900;
-      --light blue: #9eeaff;
+      --ice: #9eeaff;
       --purple: #8b45ff;
+
+      /* legacy alias: old orange accents now resolve to purple */
+      --orange: var(--purple);
 
       --border: 2px solid var(--ink);
     }
@@ -442,42 +471,10 @@
     }
 
 
-/* ========================================
-   WORK PAGE
-   ======================================== */
-
-.work-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.work-intro {
-  max-width: 850px;
-  padding: 85px 0 60px;
-}
-
-.work-title {
-  margin: 0;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(4.5rem, 13vw, 9rem);
-  line-height: .9;
-  letter-spacing: -.075em;
-}
-
-.work-lede {
-  max-width: 720px;
-  margin: 28px 0 0;
-  font-size: clamp(1.15rem, 3vw, 1.45rem);
-}
-
-.marker {
-  text-decoration: underline;
-  text-decoration-color: var(--lime);
-  text-decoration-thickness: 5px;
-  text-underline-offset: 4px;
-}
-
+/* =========================================================
+   02 — WORK: LEGACY PROJECT CARDS
+   Still useful. Unlike several former overrides.
+   ========================================================= */
 
 /* PROJECTS */
 
@@ -749,759 +746,11 @@ a.project-button:hover {
 }
 
 
-/* ========================================
-   STARS
-   FLIP FLIP FLIPADELPHIA
-   ======================================== */
+/* =========================================================
+   03 — WORK: INTERNET CANDY IN A SUIT
+   The résumé has a pulse.
+   ========================================================= */
 
-.stars-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px 90px;
-}
-
-.stars-intro {
-  padding: 70px 0 50px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 35px;
-  color: var(--ink);
-  font-family: "Courier New", monospace;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  color: var(--pink);
-}
-
-.stars-intro h1 {
-  margin: 0;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(5rem, 15vw, 10rem);
-  line-height: .8;
-  letter-spacing: -.08em;
-}
-
-.star-title {
-  display: inline-block;
-  margin-left: .05em;
-  color: var(--pink);
-  font-size: .55em;
-  vertical-align: top;
-  transition: transform .4s ease;
-}
-
-.stars-intro h1:hover .star-title {
-  transform: rotate(180deg) scale(1.35);
-}
-
-.stars-lede {
-  max-width: 800px;
-  margin: 35px 0;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
-  line-height: 1.25;
-}
-
-.stars-highlight {
-  text-decoration: underline;
-  text-decoration-color: var(--lime);
-  text-decoration-thickness: 5px;
-  text-underline-offset: 5px;
-}
-
-.stars-story {
-  max-width: 780px;
-  font-size: 1.08rem;
-}
-
-.stars-someday {
-  font-weight: 700;
-}
-
-.flip-instruction {
-  margin-top: 45px;
-  font-family: "Courier New", monospace;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .05em;
-}
-
-
-/* THE GALLERY */
-
-.star-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  margin-top: 20px;
-}
-
-.star-card {
-  width: min(850px, 88%);
-}
-
-.star-card:nth-child(odd) {
-  align-self: flex-start;
-}
-
-.star-card:nth-child(even) {
-  align-self: flex-end;
-}
-
-
-/* THE CARD */
-
-.star-card {
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-
-  perspective: 1600px;
-}
-
-.star-card-inner {
-  position: relative;
-  display: grid;
-  width: 100%;
-
-  transform-style: preserve-3d;
-
-  transition:
-    transform .75s cubic-bezier(.2, .75, .25, 1.15);
-}
-
-.star-card.is-flipped .star-card-inner {
-  transform: rotateY(180deg);
-}
-
-
-/* BOTH SIDES */
-
-.star-face {
-  grid-area: 1 / 1;
-
-  display: block;
-  width: 100%;
-
-  overflow: hidden;
-
-  border: 2px solid var(--ink);
-  border-radius: 24px;
-
-  background: white;
-
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-
-  box-shadow: 7px 7px 0 var(--ink);
-}
-
-.star-back {
-  transform: rotateY(180deg);
-}
-
-
-
-/* ART */
-
-.star-face img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* LITTLE LIFT BEFORE THE FLIP */
-
-.star-card:hover .star-card-inner {
-  transform: translateY(-6px) rotate(-.5deg);
-}
-
-.star-card.is-flipped:hover .star-card-inner {
-  transform: translateY(-6px) rotateY(180deg) rotate(.5deg);
-}
-
-.star-card:focus-visible {
-  outline: 4px solid var(--lime);
-  outline-offset: 8px;
-  border-radius: 24px;
-}
-
-
-/* stagger the gallery because perfect grids are suspicious */
-
-
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-
-  .stars-intro {
-    padding-top: 50px;
-  }
-
-.star-gallery {
-  gap: 45px;
-}
-
-.star-card {
-  width: 100%;
-}
-
- .star-face {
-  grid-area: 1 / 1;
-
-  display: block;
-  width: 100%;
-
-  overflow: hidden;
-
-  border: 2px solid var(--ink);
-  border-radius: 24px;
-
-  background: white;
-
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-
-  box-shadow: 7px 7px 0 var(--ink);
-}
-
-  .flip-instruction {
-    margin-top: 35px;
-  }
-}
-
-
-/* motion-sensitive humans get calm stars */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .star-card-inner {
-    transition: none;
-  }
-
-  .star-card:hover .star-card-inner {
-    transform: none;
-  }
-
-  .star-card.is-flipped .star-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .star-card.is-flipped:hover .star-card-inner {
-    transform: rotateY(180deg);
-  }
-
-}
-
-/* ========================================
-   GLITTER CRIMES
-   ======================================== */
-
-.click-sparkle {
-  position: fixed;
-  z-index: 9999;
-
-  pointer-events: none;
-  user-select: none;
-
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-
-  transform: translate(-50%, -50%);
-  animation: sparkle-crime 1200ms cubic-bezier(.15,.75,.25,1) forwards;
-}
-
-@keyframes sparkle-crime {
-
-  0% {
-    opacity: 1;
-    transform:
-      translate(-50%, -50%)
-      scale(.4)
-      rotate(0deg);
-  }
-
-  35% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform:
-      translate(
-        calc(-50% + var(--sparkle-x)),
-        calc(-50% + var(--sparkle-y))
-      )
-      scale(.7)
-      rotate(var(--sparkle-rotate));
-  }
-}
-
-
-/* make the giant star LOOK suspiciously clickable */
-
-.star-title {
-  cursor: pointer;
-  user-select: none;
-}
-
-
-/* responsible glitter citizenship */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .click-sparkle {
-    display: none;
-  }
-
-}
-
-/* ========================================
-   PLAY LANDING PAGE
-   ======================================== */
-
-.play-main {
-    width: min(1100px, calc(100% - 40px));
-    margin: 0 auto;
-    padding: 70px 0 100px;
-}
-
-
-/* INTRO */
-
-.play-intro {
-    position: relative;
-    margin-bottom: 65px;
-}
-
-.play-title {
-    margin: 5px 0 10px;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(5rem, 13vw, 10rem);
-    line-height: 0.85;
-    letter-spacing: -0.08em;
-}
-
-.play-star {
-    display: inline-block;
-    margin-left: 0.08em;
-    color: var(--pink);
-    transform: rotate(8deg);
-}
-
-.play-lede {
-    max-width: 700px;
-    margin-top: 28px;
-    font-size: clamp(1.35rem, 2.5vw, 2rem);
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.play-sublede {
-    max-width: 650px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-
-/* STARS PORTAL */
-
-.play-feature {
-    position: relative;
-    display: block;
-    overflow: hidden;
-
-    padding: clamp(35px, 6vw, 75px);
-
-    color: var(--ink);
-    text-decoration: none;
-
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(199, 249, 0, 0.75) 0 5%,
-            transparent 5.5%
-        ),
-        radial-gradient(
-            circle at 70% 70%,
-            rgba(255, 62, 165, 0.38) 0 15%,
-            transparent 15.5%
-        ),
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(49, 92, 255, 0.32) 0 18%,
-            transparent 18.5%
-        ),
-        var(--paper-2);
-
-    border: var(--border);
-    border-radius: 45px;
-
-    box-shadow: 12px 12px 0 var(--ink);
-
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
-}
-
-.play-feature:hover,
-.play-feature:focus-visible {
-    transform: translate(-6px, -6px);
-    box-shadow: 18px 18px 0 var(--ink);
-}
-
-
-/* DECORATIVE CHAOS */
-
-.play-feature-decoration {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-
-    font-size: clamp(1.4rem, 4vw, 3rem);
-    letter-spacing: 0.15em;
-
-    color: var(--purple);
-
-    transform: rotate(5deg);
-
-    pointer-events: none;
-}
-
-
-/* CONTENT */
-
-.play-feature-label {
-    margin: 0 0 25px;
-
-    font-family: monospace;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.play-feature h2 {
-    margin: 0;
-
-    font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(4rem, 11vw, 8rem);
-    line-height: 0.85;
-    letter-spacing: -0.07em;
-
-    color: var(--blue);
-}
-
-.play-feature-description {
-    max-width: 600px;
-    margin: 35px 0 30px;
-
-    font-size: clamp(1.15rem, 2vw, 1.45rem);
-    line-height: 1.45;
-}
-
-
-/* TAG CANDY */
-
-.play-feature-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    margin-bottom: 40px;
-}
-
-.play-feature-tags span {
-    padding: 7px 12px;
-
-    border: 2px solid var(--ink);
-    border-radius: 999px;
-
-    background: var(--paper);
-
-    font-family: monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.play-feature-tags span:nth-child(1) {
-    background: var(--pink);
-}
-
-.play-feature-tags span:nth-child(2) {
-    background: var(--blue);
-    color: white;
-}
-
-.play-feature-tags span:nth-child(3) {
-    background: var(--lime);
-}
-
-.play-feature-tags span:nth-child(4) {
-    background: var(--orange);
-}
-
-
-/* ENTER */
-
-.play-enter {
-    display: inline-block;
-
-    padding: 13px 18px;
-
-    border: 2px solid var(--ink);
-    border-radius: 12px;
-
-    background: var(--ink);
-    color: white;
-
-    font-family: monospace;
-    font-weight: 700;
-
-    transition:
-        transform 150ms ease,
-        background 150ms ease,
-        color 150ms ease;
-}
-
-.play-feature:hover .play-enter {
-    transform: rotate(-2deg) scale(1.04);
-    background: var(--lime);
-    color: var(--ink);
-}
-
-
-/* MORE NONSENSE */
-
-.play-coming-soon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-
-    margin-top: 75px;
-
-    font-family: monospace;
-    text-align: center;
-}
-
-.play-coming-soon span {
-    color: var(--pink);
-    font-size: 1.5rem;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-    .play-main {
-        width: min(100% - 28px, 1100px);
-        padding-top: 45px;
-    }
-
-    .play-title {
-        font-size: clamp(4.5rem, 25vw, 7rem);
-    }
-
-    .play-feature {
-        padding: 35px 25px;
-        border-radius: 28px;
-        box-shadow: 7px 7px 0 var(--ink);
-    }
-
-    .play-feature:hover,
-    .play-feature:focus-visible {
-        transform: translate(-3px, -3px);
-        box-shadow: 10px 10px 0 var(--ink);
-    }
-
-    .play-feature-decoration {
-        top: 15px;
-        right: 15px;
-        opacity: 0.7;
-    }
-
-}
-
-/* ========================================
-   PLAY AFTER DARK
-   ======================================== */
-
-.play-page {
-    background: #111016;
-    color: #fff7fc;
-}
-
-.play-page header {
-    background: #111016;
-    border-color: #fff7fc;
-}
-
-.play-page nav a {
-    color: #fff7fc;
-}
-
-.play-page .logo {
-    color: #fff7fc;
-}
-
-.play-page .eyebrow {
-    color: #d7ff45;
-}
-
-.play-page .play-title {
-    color: #fff7fc;
-}
-
-.play-page .play-star {
-    color: #ff3ea5;
-}
-
-.play-page .play-lede {
-    color: #fff7fc;
-}
-
-.play-page .play-sublede {
-    color: #ffb3e6;
-}
-
-.play-page footer {
-    background: #111016;
-    color: #fff7fc;
-    border-color: #fff7fc;
-}
-
-.play-page footer a {
-    color: #d7ff45;
-}
-/* ========================================
-   PLAY: TASTEFUL VANDALISM
-   ======================================== */
-
-.play-page {
-    position: relative;
-    overflow-x: hidden;
-}
-
-.play-sky {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.play-page main {
-    position: relative;
-    z-index: 1;
-}
-
-.sky-star {
-    position: absolute;
-    line-height: 1;
-    user-select: none;
-    opacity: 0.9;
-}
-
-/* RIGHT-SIDE CONSTELLATION */
-
-.s1 {
-    top: 11%;
-    right: 9%;
-    font-size: 5rem;
-    color: #ff3ea5;
-    transform: rotate(12deg);
-}
-
-.s2 {
-    top: 19%;
-    right: 21%;
-    font-size: 2.3rem;
-    color: #c7f900;
-}
-
-.s3 {
-    top: 29%;
-    right: 6%;
-    font-size: 3.4rem;
-    color: #8b45ff;
-    transform: rotate(-15deg);
-}
-
-.s4 {
-    top: 38%;
-    right: 17%;
-    font-size: 1.7rem;
-    color: #45caff;
-}
-
-.s5 {
-    top: 48%;
-    right: 4%;
-    font-size: 6rem;
-    color: #315cff;
-    opacity: 0.7;
-}
-
-.s6 {
-    top: 57%;
-    right: 23%;
-    font-size: 3rem;
-    color: #ff71c8;
-}
-
-/* A LITTLE CHAOS ON THE LEFT */
-
-.s7 {
-    top: 34%;
-    left: 5%;
-    font-size: 2.5rem;
-    color: #9eeaff;
-}
-
-.s8 {
-    top: 53%;
-    left: 8%;
-    font-size: 4rem;
-    color: #ff3ea5;
-    opacity: 0.7;
-}
-
-.s9 {
-    top: 68%;
-    right: 11%;
-    font-size: 2rem;
-    color: #c7f900;
-}
-
-.s10 {
-    top: 75%;
-    left: 4%;
-    font-size: 2rem;
-    color: #8b45ff;
-}
-
-.s11 {
-    top: 82%;
-    right: 27%;
-    font-size: 3.5rem;
-    color: #ff3ea5;
-}
-
-.s12 {
-    top: 88%;
-    right: 7%;
-    font-size: 4rem;
-    color: #45caff;
-}
 /* ========================================
    WORK PAGE
    Internet Candy in a Suit
@@ -1993,6 +1242,459 @@ a.project-button:hover {
     .credential:nth-child(2) {
         grid-column: auto;
     }
+
+
+/* =========================================================
+   04 — PLAY
+   Adult supervision has left the building.
+   ========================================================= */
+
+/* ========================================
+   PLAY LANDING PAGE
+   ======================================== */
+
+.play-main {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+
+/* INTRO */
+
+.play-intro {
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.play-title {
+    margin: 5px 0 10px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(5rem, 13vw, 10rem);
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+}
+
+.play-star {
+    display: inline-block;
+    margin-left: 0.08em;
+    color: var(--pink);
+    transform: rotate(8deg);
+}
+
+.play-lede {
+    max-width: 700px;
+    margin-top: 28px;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.play-sublede {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* STARS PORTAL */
+
+.play-feature {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    padding: clamp(35px, 6vw, 75px);
+
+    color: var(--ink);
+    text-decoration: none;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(199, 249, 0, 0.75) 0 5%,
+            transparent 5.5%
+        ),
+        radial-gradient(
+            circle at 70% 70%,
+            rgba(255, 62, 165, 0.38) 0 15%,
+            transparent 15.5%
+        ),
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(49, 92, 255, 0.32) 0 18%,
+            transparent 18.5%
+        ),
+        var(--paper-2);
+
+    border: var(--border);
+    border-radius: 45px;
+
+    box-shadow: 12px 12px 0 var(--ink);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.play-feature:hover,
+.play-feature:focus-visible {
+    transform: translate(-6px, -6px);
+    box-shadow: 18px 18px 0 var(--ink);
+}
+
+
+/* DECORATIVE CHAOS */
+
+.play-feature-decoration {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    font-size: clamp(1.4rem, 4vw, 3rem);
+    letter-spacing: 0.15em;
+
+    color: var(--purple);
+
+    transform: rotate(5deg);
+
+    pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.play-feature-label {
+    margin: 0 0 25px;
+
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.play-feature h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(4rem, 11vw, 8rem);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+
+    color: var(--blue);
+}
+
+.play-feature-description {
+    max-width: 600px;
+    margin: 35px 0 30px;
+
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.45;
+}
+
+
+/* TAG CANDY */
+
+.play-feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.play-feature-tags span {
+    padding: 7px 12px;
+
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+
+    background: var(--paper);
+
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.play-feature-tags span:nth-child(1) {
+    background: var(--pink);
+}
+
+.play-feature-tags span:nth-child(2) {
+    background: var(--blue);
+    color: white;
+}
+
+.play-feature-tags span:nth-child(3) {
+    background: var(--lime);
+}
+
+.play-feature-tags span:nth-child(4) {
+    background: var(--orange);
+}
+
+
+/* ENTER */
+
+.play-enter {
+    display: inline-block;
+
+    padding: 13px 18px;
+
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+
+    background: var(--ink);
+    color: white;
+
+    font-family: monospace;
+    font-weight: 700;
+
+    transition:
+        transform 150ms ease,
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.play-feature:hover .play-enter {
+    transform: rotate(-2deg) scale(1.04);
+    background: var(--lime);
+    color: var(--ink);
+}
+
+
+/* MORE NONSENSE */
+
+.play-coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 75px;
+
+    font-family: monospace;
+    text-align: center;
+}
+
+.play-coming-soon span {
+    color: var(--pink);
+    font-size: 1.5rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .play-main {
+        width: min(100% - 28px, 1100px);
+        padding-top: 45px;
+    }
+
+    .play-title {
+        font-size: clamp(4.5rem, 25vw, 7rem);
+    }
+
+    .play-feature {
+        padding: 35px 25px;
+        border-radius: 28px;
+        box-shadow: 7px 7px 0 var(--ink);
+    }
+
+    .play-feature:hover,
+    .play-feature:focus-visible {
+        transform: translate(-3px, -3px);
+        box-shadow: 10px 10px 0 var(--ink);
+    }
+
+    .play-feature-decoration {
+        top: 15px;
+        right: 15px;
+        opacity: 0.7;
+    }
+
+}
+
+/* ========================================
+   PLAY AFTER DARK
+   ======================================== */
+
+.play-page {
+    background: #111016;
+    color: #fff7fc;
+}
+
+.play-page header {
+    background: #111016;
+    border-color: #fff7fc;
+}
+
+.play-page nav a {
+    color: #fff7fc;
+}
+
+.play-page .logo {
+    color: #fff7fc;
+}
+
+.play-page .eyebrow {
+    color: #d7ff45;
+}
+
+.play-page .play-title {
+    color: #fff7fc;
+}
+
+.play-page .play-star {
+    color: #ff3ea5;
+}
+
+.play-page .play-lede {
+    color: #fff7fc;
+}
+
+.play-page .play-sublede {
+    color: #ffb3e6;
+}
+
+.play-page footer {
+    background: #111016;
+    color: #fff7fc;
+    border-color: #fff7fc;
+}
+
+.play-page footer a {
+    color: #d7ff45;
+}
+/* ========================================
+   PLAY: TASTEFUL VANDALISM
+   ======================================== */
+
+.play-page {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.play-sky {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.play-page main {
+    position: relative;
+    z-index: 1;
+}
+
+.sky-star {
+    position: absolute;
+    line-height: 1;
+    user-select: none;
+    opacity: 0.9;
+}
+
+/* RIGHT-SIDE CONSTELLATION */
+
+.s1 {
+    top: 11%;
+    right: 9%;
+    font-size: 5rem;
+    color: #ff3ea5;
+    transform: rotate(12deg);
+}
+
+.s2 {
+    top: 19%;
+    right: 21%;
+    font-size: 2.3rem;
+    color: #c7f900;
+}
+
+.s3 {
+    top: 29%;
+    right: 6%;
+    font-size: 3.4rem;
+    color: #8b45ff;
+    transform: rotate(-15deg);
+}
+
+.s4 {
+    top: 38%;
+    right: 17%;
+    font-size: 1.7rem;
+    color: #45caff;
+}
+
+.s5 {
+    top: 48%;
+    right: 4%;
+    font-size: 6rem;
+    color: #315cff;
+    opacity: 0.7;
+}
+
+.s6 {
+    top: 57%;
+    right: 23%;
+    font-size: 3rem;
+    color: #ff71c8;
+}
+
+/* A LITTLE CHAOS ON THE LEFT */
+
+.s7 {
+    top: 34%;
+    left: 5%;
+    font-size: 2.5rem;
+    color: #9eeaff;
+}
+
+.s8 {
+    top: 53%;
+    left: 8%;
+    font-size: 4rem;
+    color: #ff3ea5;
+    opacity: 0.7;
+}
+
+.s9 {
+    top: 68%;
+    right: 11%;
+    font-size: 2rem;
+    color: #c7f900;
+}
+
+.s10 {
+    top: 75%;
+    left: 4%;
+    font-size: 2rem;
+    color: #8b45ff;
+}
+
+.s11 {
+    top: 82%;
+    right: 27%;
+    font-size: 3.5rem;
+    color: #ff3ea5;
+}
+
+.s12 {
+    top: 88%;
+    right: 7%;
+    font-size: 4rem;
+    color: #45caff;
+}
+
+
+/* =========================================================
+   05 — STARS: DEEP SPACE + STORY
+   Here be telescopes, stardust, and feelings.
+   ========================================================= */
+
 }/* =========================================================
    STARS — DEEP SPACE BACKGROUND
    ========================================================= */
@@ -2592,157 +2294,11 @@ a.project-button:hover {
     }
 }
 
+
 /* =========================================================
-   THE THREE P's — NO SELF-HELP BOOKS ALLOWED
+   06 — STARS: THE THREE P’S
+   Possibility. Perspective. Purpose. Also: CSS.
    ========================================================= */
-
-.stars-page .three-p {
-    margin: 6rem 0 !important;
-    font-family: "Megrim", sans-serif;
-    font-style: normal;
-    line-height: 1;
-}
-
-
-/* POSSIBILITY */
-
-.possibility-word {
-    display: flex;
-    flex-wrap: wrap;
-
-    font-family: "Megrim", sans-serif;
-    font-size: clamp(3rem, 7vw, 6rem);
-
-    color: #ff71c8;
-
-    cursor: default;
-}
-
-.possibility-word span {
-    display: inline-block;
-
-    transition:
-        transform 250ms ease,
-        color 250ms ease,
-        text-shadow 250ms ease;
-}
-
-.possibility-word span:hover {
-    transform:
-        translateY(-0.18em)
-        rotate(8deg)
-        scale(1.3);
-
-    color: #9eeaff;
-
-    text-shadow:
-        0 0 12px rgba(158, 234, 255, .55);
-}
-
-
-/* give neighboring letters different possibilities */
-
-.possibility-word span:nth-child(3n):hover {
-    color: #c9a7ff;
-    transform:
-        translateY(0.15em)
-        rotate(-12deg)
-        scale(.8);
-}
-
-.possibility-word span:nth-child(4n):hover {
-    color: #d7ff45;
-    transform:
-        translateY(-0.25em)
-        rotate(15deg)
-        scale(1.5);
-}
-
-
-/* PERSPECTIVE */
-
-.perspective-word {
-    display: block;
-
-    margin: 4rem 0 4rem 18%;
-    padding: 0;
-
-    border: 0;
-    background: none;
-
-    font-family: "Megrim", sans-serif;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-
-    color: #c9a7ff;
-
-    cursor: pointer;
-
-    transition:
-        font-size 500ms ease,
-        transform 500ms ease,
-        color 300ms ease;
-}
-
-.perspective-word:hover {
-    color: #ffffff;
-
-    text-shadow:
-        0 0 18px rgba(201, 167, 255, .4);
-}
-
-
-/* PURPOSE */
-
-.purpose-word {
-    display: block;
-
-    margin: 5rem 0 0 7%;
-    padding: 0;
-
-    border: 0;
-    background: none;
-
-    font-family: "Megrim", sans-serif;
-    font-size: clamp(3rem, 7vw, 6rem);
-
-    color: #9eeaff;
-
-    cursor: pointer;
-
-    transition:
-        color 300ms ease,
-        letter-spacing 500ms ease,
-        text-shadow 300ms ease;
-}
-
-.purpose-word:hover {
-    color: #ffffff;
-    letter-spacing: .08em;
-
-    text-shadow:
-        0 0 20px rgba(158, 234, 255, .45);
-}
-
-
-/* keyboard users get the weirdness too */
-
-.perspective-word:focus-visible,
-.purpose-word:focus-visible {
-    outline: 1px solid #9eeaff;
-    outline-offset: 8px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .perspective-word,
-    .purpose-word {
-        margin-left: 0;
-    }
-}
-
 
 /* =========================================================
    THREE P's — FIX THE CSS GHOSTS
@@ -3038,74 +2594,187 @@ a.project-button:hover {
     }
 }
 
+
 /* =========================================================
-   STARS — SPECIAL ARTWORK FORMATS
+   07 — GLITTER CRIMES
+   No jury would convict us.
    ========================================================= */
 
+/* ========================================
+   GLITTER CRIMES
+   ======================================== */
 
-/* ---------------------------------------------------------
-   KALPANA — THREE-PANEL FRONT
-   --------------------------------------------------------- */
+.click-sparkle {
+  position: fixed;
+  z-index: 9999;
 
-.stars-page .kalpana-triptych {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: stretch;
+  pointer-events: none;
+  user-select: none;
 
-    gap: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
 
-    background: #07070b;
+  transform: translate(-50%, -50%);
+  animation: sparkle-crime 1200ms cubic-bezier(.15,.75,.25,1) forwards;
 }
 
-.stars-page .kalpana-triptych img {
-    display: block;
+@keyframes sparkle-crime {
 
-    width: 100%;
-    height: 100%;
+  0% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      scale(.4)
+      rotate(0deg);
+  }
 
-    object-fit: contain;
+  35% {
+    opacity: 1;
+  }
 
-    border-radius: 0;
+  100% {
+    opacity: 0;
+    transform:
+      translate(
+        calc(-50% + var(--sparkle-x)),
+        calc(-50% + var(--sparkle-y))
+      )
+      scale(.7)
+      rotate(var(--sparkle-rotate));
+  }
 }
 
 
-/* ---------------------------------------------------------
-   JOCELYN — TWO COMPANION PAGES ON THE BACK
-   --------------------------------------------------------- */
+/* make the giant star LOOK suspiciously clickable */
 
-.stars-page .jocelyn-double-back {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.star-title {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* responsible glitter citizenship */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .click-sparkle {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   08 — STARS: GALLERY + SPECIAL ART
+   The art decides its shape. We no longer negotiate with aspect-ratio prisons.
+   ========================================================= */
+
+/* =========================================================
+   STARS — THE GALLERY
+   The art decides its shape. We have learned this lesson.
+   ========================================================= */
+
+.stars-page .star-gallery {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-
-    gap: 1rem;
-    padding: 1rem;
-
-    background: #07070b;
-}
-
-.stars-page .jocelyn-double-back img {
-    display: block;
+    gap: 4rem;
 
     width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    border-radius: 0.75rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
 }
 
+/* ---------- STANDARD FLIP ART ---------- */
 
-/* ---------------------------------------------------------
-   E.E. CUMMINGS — THREE-PAGE LITTLE BOOK
-   --------------------------------------------------------- */
+.stars-page .star-card {
+    appearance: none;
+    -webkit-appearance: none;
+
+    display: block;
+    position: relative;
+
+    width: min(100%, 900px);
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    perspective: 1600px;
+}
+
+.stars-page .star-card-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transform-style: preserve-3d;
+    transition: transform 700ms cubic-bezier(.2, .75, .25, 1.15);
+}
+
+.stars-page .star-card.is-flipped .star-card-inner {
+    transform: rotateY(180deg);
+}
+
+.stars-page .star-face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+    background: #07070b;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* The front participates in layout and establishes natural card height. */
+.stars-page .star-front {
+    position: relative;
+}
+
+/* The back occupies the exact footprint established by the front. */
+.stars-page .star-back {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+.stars-page .star-face > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.stars-page .star-back > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.stars-page .star-card:hover .star-card-inner {
+    transform: translateY(-6px) rotate(-.5deg);
+}
+
+.stars-page .star-card.is-flipped:hover .star-card-inner {
+    transform: translateY(-6px) rotateY(180deg) rotate(.5deg);
+}
+
+/* ---------- MULTIPAGE ART ----------
+   e.e. cummings, Jocelyn, and any future tiny space-books. */
 
 .stars-page .star-multipage {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto 5rem;
-
+    width: min(100%, 900px);
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -3115,19 +2784,15 @@ a.project-button:hover {
 
     position: relative;
     display: block;
-
     width: 100%;
-    aspect-ratio: 4 / 5;
-
+    height: auto;
     margin: 0;
     padding: 0;
 
     border: var(--border);
     border-radius: 1.5rem;
-
     background: #07070b;
-
-    box-shadow: 8px 8px 0 rgba(201, 167, 255, 0.22);
+    box-shadow: 8px 8px 0 rgba(201, 167, 255, .22);
 
     overflow: hidden;
     cursor: pointer;
@@ -3136,55 +2801,45 @@ a.project-button:hover {
 .stars-page .multipage-page {
     position: absolute;
     inset: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 
     opacity: 0;
     pointer-events: none;
-
     transform: translateX(2%);
+
     transition:
         opacity 450ms ease,
         transform 550ms ease;
 }
 
+/* Active page enters normal layout, so its image decides the container height. */
 .stars-page .multipage-page.is-active {
+    position: relative;
+    inset: auto;
     opacity: 1;
     pointer-events: auto;
-
     transform: translateX(0);
 }
 
 .stars-page .multipage-page img {
     display: block;
-
     width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    background: #07070b;
+    height: auto;
+    background: transparent;
 }
-
-
-/* little celestial page indicator */
 
 .stars-page .multipage-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    gap: 0.8rem;
+    gap: .8rem;
 
     min-height: 2rem;
     margin-top: 1.25rem;
 
     font-family: "Megrim", sans-serif;
     font-size: 1.3rem;
-
-    color: rgba(255,255,255,.35);
+    color: rgba(255, 255, 255, .35);
 }
 
 .stars-page .multipage-dots span {
@@ -3196,51 +2851,84 @@ a.project-button:hover {
 
 .stars-page .multipage-dots span.is-active {
     color: #ff71c8;
-
     transform: scale(1.3);
-
-    text-shadow:
-        0 0 12px rgba(255,62,165,.5);
+    text-shadow: 0 0 12px rgba(255, 62, 165, .5);
 }
 
+/* ---------- KALPANA — TRIPTYCH ----------
+   Three panels are ONE artwork. No postage-stamp coffins. */
 
-/* ---------------------------------------------------------
-   SPECIAL CARD MOBILE BEHAVIOR
-   --------------------------------------------------------- */
+.stars-page .kalpana-card .kalpana-triptych {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: transparent;
+}
+
+.stars-page .kalpana-card .kalpana-triptych > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    border-radius: 0;
+}
+
+.stars-page .kalpana-card .kalpana-triptych > img:first-child {
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.stars-page .kalpana-card .kalpana-triptych > img:last-child {
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+/* ---------- GALLERY MOBILE ---------- */
 
 @media (max-width: 700px) {
-
-    /* preserve the triptych as one artwork */
-    .stars-page .kalpana-triptych {
-        grid-template-columns: repeat(3, 1fr);
+    .stars-page .star-gallery {
+        gap: 3rem;
     }
 
-    /* Jocelyn still works side-by-side,
-       but tighten the space between pages */
-    .stars-page .jocelyn-double-back {
-        gap: 0.35rem;
-        padding: 0.35rem;
-    }
-
-    .stars-page .star-multipage {
-        margin-bottom: 4rem;
-    }
-
-    .stars-page .multipage-art {
+    .stars-page .multipage-art,
+    .stars-page .star-face {
         border-radius: 1rem;
+    }
+
+    .stars-page .kalpana-card .kalpana-triptych > img:first-child {
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .stars-page .kalpana-card .kalpana-triptych > img:last-child {
+        border-radius: 0 1rem 1rem 0;
     }
 }
 
-
-/* respect reduced-motion settings */
-
 @media (prefers-reduced-motion: reduce) {
-
+    .stars-page .star-card-inner,
     .stars-page .multipage-page,
     .stars-page .multipage-dots span {
         transition: none;
     }
+
+    .stars-page .star-card:hover .star-card-inner {
+        transform: none;
+    }
+
+    .stars-page .star-card.is-flipped,
+    .stars-page .star-card.is-flipped:hover .star-card-inner {
+        transform: rotateY(180deg);
+    }
 }
+
+
+/* =========================================================
+   09 — STARS: END OF THE UNIVERSE
+   Apparently the universe has a footer.
+   ========================================================= */
 
 /* =========================================================
    STARS — END OF THE UNIVERSE
@@ -3370,274 +3058,25 @@ a.project-button:hover {
         padding-top: 5rem;
     }
 }
+
+
 /* =========================================================
-   STARS — GALLERY GEOMETRY RESET
+   HERE LIES THE ORIGINAL STARS CSS
+   2026–2026
+
+   It was honest.
+   It tried hard.
+   Like, WAY too hard.
+
+   It solved problems.
+   It created new problems.
+   It solved those problems with increasingly specific
+   solutions to problems it had previously created.
+
+   It taught us important lessons about the cascade.
+
+   The full archaeological record survives in Git history
+   for anyone sufficiently committed to suffering.
+
+   May it rest in specificity.
    ========================================================= */
-
-.stars-page .star-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    max-width: 1000px;
-
-    margin: 0 auto;
-    padding: 0;
-
-    gap: 4rem;
-}
-
-
-/* NORMAL FLIP CARDS */
-
-.stars-page .star-card {
-    appearance: none;
-    -webkit-appearance: none;
-
-    display: block;
-    position: relative;
-
-    width: min(100%, 900px);
-    height: auto;
-    aspect-ratio: 4 / 5;
-
-    margin: 0;
-    padding: 0;
-
-    border: 0;
-    background: transparent;
-
-    cursor: pointer;
-
-    perspective: 1600px;
-}
-
-
-/* this is the actual flipping object */
-
-.stars-page .star-card-inner {
-    display: block;
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    transform-style: preserve-3d;
-
-    transition: transform 700ms ease;
-}
-
-
-/* flip */
-
-.stars-page .star-card.is-flipped .star-card-inner {
-    transform: rotateY(180deg);
-}
-
-
-/* BOTH SIDES */
-
-.stars-page .star-face {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-
-    border-radius: 1.5rem;
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-
-    background: #07070b;
-}
-
-
-/* backside */
-
-.stars-page .star-back {
-    transform: rotateY(180deg);
-}
-
-
-/* THE ACTUAL ART */
-
-.stars-page .star-face > img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    border-radius: inherit;
-}
-/* =========================================================
-   MULTIPAGE ART — SIZE TO THE ACTUAL ART
-   ========================================================= */
-
-.stars-page .multipage-art {
-    aspect-ratio: auto;
-    height: auto;
-    overflow: hidden;
-}
-
-
-/* active page establishes the container height */
-
-.stars-page .multipage-page {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-
-/* active image participates in layout */
-
-.stars-page .multipage-page.is-active {
-    position: relative;
-    inset: auto;
-}
-
-
-/* DON'T force the image into a predetermined box */
-
-.stars-page .multipage-page img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: initial;
-
-    background: transparent;
-}
-/* =========================================================
-   STARS — LET ALL ART KEEP ITS NATURAL PROPORTIONS
-   ========================================================= */
-
-.stars-page .star-card {
-    aspect-ratio: auto;
-    height: auto;
-}
-
-
-/* the front establishes the card's natural height */
-
-.stars-page .star-card-inner {
-    height: auto;
-}
-
-
-/* faces normally overlap for the flip */
-
-.stars-page .star-face {
-    width: 100%;
-    height: auto;
-}
-
-
-/* front participates in layout and determines height */
-
-.stars-page .star-front {
-    position: relative;
-    inset: auto;
-}
-
-
-/* back stays layered behind it */
-
-.stars-page .star-back {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* images retain their actual proportions */
-
-.stars-page .star-face > img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: initial;
-}
-
-
-/* back image fits inside the footprint of the front */
-
-.stars-page .star-back > img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-/* =========================================================
-   KALPANA — TRIPTYCH OVERRIDE
-   ========================================================= */
-
-.stars-page .kalpana-card .kalpana-triptych {
-    position: relative;
-    inset: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    width: 100%;
-    height: auto;
-
-    gap: 0;
-
-    overflow: hidden;
-    background: transparent;
-}
-
-
-/* Override the generic star-face image rules */
-
-.stars-page .kalpana-card .kalpana-triptych > img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-
-    min-width: 0;
-    border-radius: 0;
-}
-
-
-/* rounded outer corners only */
-
-.stars-page .kalpana-card .kalpana-triptych > img:first-child {
-    border-radius: 1.5rem 0 0 1.5rem;
-}
-
-.stars-page .kalpana-card .kalpana-triptych > img:last-child {
-    border-radius: 0 1.5rem 1.5rem 0;
-}
-
-
-/* let the assembled triptych determine card height */
-
-.stars-page .kalpana-card .star-card-inner {
-    height: auto;
-}
-
-.stars-page .kalpana-card {
-    height: auto;
-    aspect-ratio: auto;
-}
