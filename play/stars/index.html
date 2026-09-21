@@ -400,28 +400,43 @@
   </button>
 
 
-  <!-- JOCELYN BELL BURNELL — DOUBLE BACK -->
-  <button class="star-card special-card jocelyn-card"
+<!-- JOCELYN BELL BURNELL — THREE PAGE PIECE -->
+<div class="star-multipage jocelyn-card">
+
+  <button class="multipage-art"
           type="button"
-          aria-label="Flip the Jocelyn Bell Burnell artwork"
-          aria-pressed="false">
-    <span class="star-card-inner">
+          aria-label="Turn the page of the Jocelyn Bell Burnell artwork">
 
-      <span class="star-face star-front">
-        <img src="/images/stars/JocelynBlackHole.png"
-             alt="Jocelyn Bell Burnell black hole artwork">
-      </span>
-
-      <span class="star-face star-back jocelyn-double-back">
-        <img src="/images/stars/JocelynBlackHole2.png"
-             alt="Information about the black hole">
-
-        <img src="/images/stars/JocelynBlackHole3.png"
-             alt="Information about Jocelyn Bell Burnell">
-      </span>
-
+    <!-- PAGE 1: ART -->
+    <span class="multipage-page is-active">
+      <img
+        src="/images/stars/JocelynBlackHole.png"
+        alt="Jocelyn Bell Burnell black hole artwork">
     </span>
+
+    <!-- PAGE 2: BLACK HOLE -->
+    <span class="multipage-page">
+      <img
+        src="/images/stars/JocelynBlackHole2.png"
+        alt="Information about the behemoth black hole">
+    </span>
+
+    <!-- PAGE 3: JOCELYN -->
+    <span class="multipage-page">
+      <img
+        src="/images/stars/JocelynBlackHole3.png"
+        alt="Information about astronomer Jocelyn Bell Burnell">
+    </span>
+
   </button>
+
+  <div class="multipage-dots" aria-hidden="true">
+    <span class="is-active">✦</span>
+    <span>·</span>
+    <span>·</span>
+  </div>
+
+</div>
 
 
   <!-- NGC 346 -->
