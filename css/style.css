@@ -2742,3 +2742,16 @@ a.project-button:hover {
         margin-left: 0;
     }
 }
+
+
+/* =========================================================
+   THREE P's — FIX THE CSS GHOSTS
+   ========================================================= */
+
+.stars-page .three-p {
+    display: block;
+    margin: 6rem 0 !important;
+
+    font-family: "Megrim", sans-serif;
+    font-style: normal;
+}
