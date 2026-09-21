@@ -3479,3 +3479,45 @@ a.project-button:hover {
 
     border-radius: inherit;
 }
+/* =========================================================
+   MULTIPAGE ART — SIZE TO THE ACTUAL ART
+   ========================================================= */
+
+.stars-page .multipage-art {
+    aspect-ratio: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+
+/* active page establishes the container height */
+
+.stars-page .multipage-page {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* active image participates in layout */
+
+.stars-page .multipage-page.is-active {
+    position: relative;
+    inset: auto;
+}
+
+
+/* DON'T force the image into a predetermined box */
+
+.stars-page .multipage-page img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: initial;
+
+    background: transparent;
+}
