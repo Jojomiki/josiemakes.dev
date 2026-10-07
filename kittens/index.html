@@ -50,16 +50,16 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 15% 10%, rgba(169,112,255,.14), transparent 28rem),
-        radial-gradient(circle at 85% 30%, rgba(255,79,163,.10), transparent 30rem),
-        var(--bg);
-      color: var(--text);
-      font-family: "Atkinson Hyperlegible", sans-serif;
-      line-height: 1.55;
-    }
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(8, 12, 13, 0.68), rgba(8, 12, 13, 0.68)),
+    url("/images/catwallpaper.png") center top / 950px auto repeat fixed;
+
+  color: var(--text);
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  line-height: 1.55;
+}
 
     h1, h2, h3, .eyebrow, .badge, .button {
       font-family: "Space Grotesk", sans-serif;
@@ -239,13 +239,14 @@
       gap: 18px;
       margin-top: 45px;
     }
-
-    .story-card {
-      padding: 28px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--card);
+    .story-card,
+    .cat-card,
+    .contribution,
+    .fundraiser {
+      background: rgba(16, 18, 21, 0.90);
+      backdrop-filter: blur(8px);
     }
+  
 
     .story-number {
       margin-bottom: 50px;
