@@ -898,7 +898,15 @@
       .consequences-card .story-photo img { aspect-ratio: 4 / 3; height: auto; }
     }
 
-  </style>
+  
+    /* Cash App contribution links */
+    .cash-intro { max-width: 720px; line-height: 1.65; margin: 12px 0 24px; }
+    .cash-button { display: inline-flex; align-items: center; justify-content: center; text-align: center; margin-top: 18px; padding: 12px 16px; min-height: 44px; border-radius: 999px; background: #f04f8b; color: #241a22 !important; font-weight: 800; text-decoration: none; font-size: .84rem; letter-spacing: .02em; transition: transform .15s ease, filter .15s ease; }
+    .cash-button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .cash-disclaimer { font-size: .9rem; line-height: 1.6; max-width: 820px; margin: 8px auto 40px; }
+    @media (max-width: 650px) { .cash-button { width: 100%; } }
+
+</style>
 </head>
 
 <body>
@@ -1225,7 +1233,7 @@
             </div>
           </div>
 
-          <a class="button button-primary" href="#contributions">
+          <a class="button button-primary" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">
             FUND THE SNIP
           </a>
         </div>
@@ -1267,6 +1275,8 @@
         Every little bit helps de-sex a potato.
       </h2>
 
+      <p class="cash-intro">Send your contribution directly through Cash App. Add <strong>“Kitten snips”</strong> to the payment note so I know which tiny criminals you’re supporting.</p>
+
       <div class="contribution-grid">
 
         <div class="contribution">
@@ -1277,6 +1287,7 @@
             your five dollars went directly toward preventing
             extremely ill-advised family relationships.
           </p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $5 VIA CASH APP ↗</a>
         </div>
 
         <div class="contribution">
@@ -1286,6 +1297,7 @@
             A respectable contribution toward vaccines,
             surgery, medication, or other official cat bureaucracy.
           </p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $15 VIA CASH APP ↗</a>
         </div>
 
         <div class="contribution">
@@ -1295,6 +1307,7 @@
             Congratulations. You are now emotionally invested
             in whether a cat gets to keep its reproductive equipment.
           </p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $25+ VIA CASH APP ↗</a>
         </div>
 
       </div>
@@ -1302,6 +1315,8 @@
     </div>
   </section>
 
+
+  <div class="wrap"><p class="cash-disclaimer">💗 Personal fundraiser for Mama and her cream-colored kitten’s spay/neuter care. Any surplus will support HAVA or other local cat sterilization efforts. Contributions are not tax-deductible charitable donations. Cash App may require you to enter the amount manually.</p></div>
 
   <!-- MISSION LOG -->
   <section class="section">
