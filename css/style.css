@@ -3227,7 +3227,59 @@ a.project-button:hover {
         padding-top: 5rem;
     }
 }
+.kitten-feature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  margin: 24px 0;
+  background: #fff0f5;
+  color: #30212e;
+  border: 2px solid #f3b6d0;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
 
+.kitten-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px #eaa0bf55;
+}
+
+.kitten-feature-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.kitten-feature-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.kitten-feature-copy strong {
+  font-size: 1.1rem;
+}
+
+.kitten-feature-copy small {
+  color: #78596d;
+}
+
+.kitten-feature-copy b {
+  color: #a52365;
+  margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  .kitten-feature {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .kitten-feature-icon {
+    font-size: 2.2rem;
+  }
+}
 
 /* =========================================================
    HERE LIES THE ORIGINAL STARS CSS
