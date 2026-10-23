@@ -1,53 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Operation: No More Kittens | Josie Makes</title>
-  <meta
-    name="description"
-    content="Five cats. One house. Puberty approaches. Help get Mama and her four teenage kittens spayed and neutered."
-  />
+  <meta name="description"
+    content="Five cats. One house. Puberty approaches. Help get Mama and her four teenage kittens spayed and neutered." />
 
   <!-- Same fonts as Josie Makes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <style>
-:root {
-  --bg: #f7c8d0;
+    :root {
+      --bg: #f7c8d0;
 
-  /* dark ink */
-  --ink: #241a22;
-  --ink-soft: #49343f;
+      /* dark ink */
+      --ink: #241a22;
+      --ink-soft: #49343f;
 
-  /* cards */
-  --card: #18171f;
-  --card-2: #211f29;
+      /* cards */
+      --card: #18171f;
+      --card-2: #211f29;
 
-  /* light text INSIDE dark cards */
-  --cream: #fff4ee;
-  --muted-light: #c9bdc4;
+      /* light text INSIDE dark cards */
+      --cream: #fff4ee;
+      --muted-light: #c9bdc4;
 
-  /* text directly on pink */
-  --text-dark: #281b24;
-  --muted-dark: #765d69;
+      /* text directly on pink */
+      --text-dark: #281b24;
+      --muted-dark: #765d69;
 
-  /* accents */
-  --pink: #d86791;
-  --hot-pink: #f04f8b;
-  --mauve: #a77c89;
-  --red: #e65369;
-  --green: #5dbb8a;
+      /* accents */
+      --pink: #d86791;
+      --hot-pink: #f04f8b;
+      --mauve: #a77c89;
+      --red: #e65369;
+      --green: #5dbb8a;
 
-  --line: rgba(45, 27, 37, .20);
-}
+      --line: rgba(45, 27, 37, .20);
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -56,24 +54,31 @@
       scroll-behavior: smooth;
     }
 
-body {
-  margin: 0;
-  background:
-    linear-gradient(
-      rgba(255, 207, 216, 0.18),
-      rgba(255, 207, 216, 0.18)
-    ),
-  url("/images/cats/pinkcatwall3.png") center top / 900px auto repeat fixed;
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(255, 207, 216, 0.18),
+          rgba(255, 207, 216, 0.18)),
+        url("/images/cats/pinkcatwall3.png") center top / 900px auto repeat fixed;
 
-  color: var(--text);
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  line-height: 1.55;
-}
-    h1, h2, h3, .eyebrow, .badge, .button {
+      color: var(--text);
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      line-height: 1.55;
+    }
+
+    h1,
+    h2,
+    h3,
+    .eyebrow,
+    .badge,
+    .button {
       font-family: "Space Grotesk", sans-serif;
     }
 
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
       margin-top: 0;
     }
 
@@ -146,13 +151,11 @@ body {
 
     .hero h1 .no-more {
       display: block;
-      background: linear-gradient(
-        90deg,
-        var(--pink),
-        var(--purple),
-        var(--blue),
-        var(--cyan)
-      );
+      background: linear-gradient(90deg,
+          var(--pink),
+          var(--purple),
+          var(--blue),
+          var(--cyan));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -198,7 +201,7 @@ body {
     }
 
     .button-secondary {
-      background: rgba(255,255,255,.05);
+      background: rgba(255, 255, 255, .05);
     }
 
     .hero-photo {
@@ -207,7 +210,7 @@ body {
       border: 1px solid var(--line);
       border-radius: 40px;
       background:
-        linear-gradient(145deg, rgba(255,79,163,.15), transparent 45%),
+        linear-gradient(145deg, rgba(255, 79, 163, .15), transparent 45%),
         var(--card);
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -236,7 +239,7 @@ body {
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       transform: rotate(-3deg);
-      box-shadow: 6px 8px 0 rgba(0,0,0,.35);
+      box-shadow: 6px 8px 0 rgba(0, 0, 0, .35);
     }
 
     /* ---------------- STORY ---------------- */
@@ -247,6 +250,7 @@ body {
       gap: 18px;
       margin-top: 45px;
     }
+
     .story-card,
     .cat-card,
     .contribution,
@@ -254,7 +258,7 @@ body {
       background: rgba(16, 18, 21, 0.90);
       backdrop-filter: blur(8px);
     }
-  
+
 
     .story-number {
       margin-bottom: 50px;
@@ -306,7 +310,7 @@ body {
       max-width: calc(100% - 28px);
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(0,0,0,.72);
+      background: rgba(0, 0, 0, .72);
       font-size: .9rem;
       backdrop-filter: blur(10px);
     }
@@ -318,13 +322,11 @@ body {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       background:
-        repeating-linear-gradient(
-          -45deg,
-          rgba(255,229,107,.05),
-          rgba(255,229,107,.05) 15px,
+        repeating-linear-gradient(-45deg,
+          rgba(255, 229, 107, .05),
+          rgba(255, 229, 107, .05) 15px,
           transparent 15px,
-          transparent 30px
-        );
+          transparent 30px);
       text-align: center;
     }
 
@@ -401,15 +403,15 @@ body {
     }
 
     .badge-danger {
-      background: rgba(255,89,100,.16);
+      background: rgba(255, 89, 100, .16);
       color: #ff8b93;
-      border: 1px solid rgba(255,89,100,.35);
+      border: 1px solid rgba(255, 89, 100, .35);
     }
 
     .badge-fixed {
-      background: rgba(114,241,166,.12);
+      background: rgba(114, 241, 166, .12);
       color: var(--green);
-      border: 1px solid rgba(114,241,166,.3);
+      border: 1px solid rgba(114, 241, 166, .3);
     }
 
     /* ---------------- FUNDRAISING ---------------- */
@@ -419,7 +421,7 @@ body {
       border: 1px solid var(--line);
       border-radius: 32px;
       background:
-        radial-gradient(circle at 90% 0%, rgba(84,200,255,.13), transparent 25rem),
+        radial-gradient(circle at 90% 0%, rgba(84, 200, 255, .13), transparent 25rem),
         var(--card);
       box-shadow: var(--shadow);
     }
@@ -456,13 +458,11 @@ body {
       width: 0%;
       height: 100%;
       border-radius: inherit;
-      background: linear-gradient(
-        90deg,
-        var(--pink),
-        var(--purple),
-        var(--blue),
-        var(--cyan)
-      );
+      background: linear-gradient(90deg,
+          var(--pink),
+          var(--purple),
+          var(--blue),
+          var(--cyan));
       transition: width 1s ease;
     }
 
@@ -647,7 +647,24 @@ body {
         padding: 25px 20px;
       }
     }
+
+    /* ADOPTION VICTORY BANNER */
+
+    .adoption-banner {
+      margin: 30px 0;
+      padding: 32px;
+      border: 3px solid #241a22;
+      border-radius: 24px;
+      background: #f04f8b;
+      color: #241a22;
+      text-align: center;
+      box-shadow: 8px 8px 0 #241a22;
+    }
+
+    /* Rest of the adoption-banner CSS here */
   </style>
+</head>
+</style>
 </head>
 
 <body>
@@ -819,7 +836,19 @@ body {
     </div>
   </section>
 
-
+  <div class="wrap">
+    <div class="adoption-banner">
+      <span>🎉 BREAKING MEWS 🎉</span>
+      <h2>THREE VOIDS HAVE LEFT THE BUILDING.</h2>
+      <p>
+        All three black kittens have found homes!
+        Two already have spay/neuter appointments
+        scheduled with their new family.
+        Mama and her cream-colored mini-me are
+        still here, awaiting their turn.
+      </p>
+    </div>
+  </div>
   <!-- CAT ROSTER -->
   <section class="section" id="cats">
     <div class="wrap">
@@ -836,9 +865,7 @@ body {
         <article class="cat-card mama">
 
           <div class="cat-photo">
-            <div class="photo-slot">
-              MAMA — CURRENT PHOTO
-            </div>
+            <img src="/images/cats/01mamablueeyes.jpg" alt="Mama, the cream-point Siamese cat" loading="lazy">
           </div>
 
           <div class="cat-info">
@@ -853,9 +880,8 @@ body {
             </div>
 
             <p>
-              Cream-point/Siamese mama. Successfully produced
-              four employees and has now been permanently
-              removed from management.
+              Mama kitty, a sweet and shy neighborhood cat, began visiting me more and more. </p>
+            <p>As we became friends (with the help of kitty treats), she trusted me with scratches and belly rubs.</p>
             </p>
           </div>
 
@@ -866,7 +892,7 @@ body {
         <article class="cat-card">
           <div class="cat-photo">
             <div class="photo-slot">
-              KITTEN #1 — BABY/CURRENT PHOTOS
+              <img src="/images/cats/01blackopeneyes.jpg" alt="Baby girl Siamese" loading="lazy">
             </div>
           </div>
 
@@ -885,7 +911,7 @@ body {
         <article class="cat-card">
           <div class="cat-photo">
             <div class="photo-slot">
-              KITTEN #2 — BABY/CURRENT PHOTOS
+              <img src="/images/cats/01blackmica.jpg" alt="Black kitten snuggled in my shirt" loading="lazy">
             </div>
           </div>
 
@@ -904,7 +930,7 @@ body {
         <article class="cat-card">
           <div class="cat-photo">
             <div class="photo-slot">
-              KITTEN #3 — BABY/CURRENT PHOTOS
+              <img src="/images/cats/01blackscale.jpg" alt="newborn black kitten on kitchen scale" loading="lazy">
             </div>
           </div>
 
@@ -923,7 +949,7 @@ body {
         <article class="cat-card">
           <div class="cat-photo">
             <div class="photo-slot">
-              CREAM KITTEN — BABY/CURRENT PHOTOS
+              <img src="/images/cats/01siameseeyesclosed.jpg" alt="Baby girl Siamese" loading="lazy">
             </div>
           </div>
 
@@ -946,24 +972,28 @@ body {
   <!-- MONEY -->
   <section class="section" id="fundraiser">
     <div class="wrap">
-
       <div class="fundraiser">
 
-        <div class="eyebrow">Operation Budget</div>
+        <div class="eyebrow">Operation Budget // Phase Two</div>
 
         <div class="money-top">
           <div>
-            <h2 class="section-title">
-              Fund the snip.
-            </h2>
+            <h2 class="section-title">Two cats. Two snips. One mission.</h2>
 
-            <div class="money-number">
-              $0 <span>of $500</span>
+            <p>
+              THREE KITTENS REHOMED! 🎉
+              Mama and her cream-colored accomplice are
+              the final two awaiting their reproductive
+              retirement paperwork.
+            </p>
+
+            <div class="money-number" id="moneyNumber">
+              $0 <span>of $200</span>
             </div>
           </div>
 
-          <a class="button button-primary" href="#">
-            CONTRIBUTE
+          <a class="button button-primary" href="#contributions">
+            FUND THE SNIP
           </a>
         </div>
 
@@ -972,19 +1002,26 @@ body {
         </div>
 
         <p class="cost-note">
-          <strong>$500 is the initial working target, not a made-up
-          veterinary invoice.</strong>
-          I'm actively pursuing HAVA and other local low-cost
-          spay/neuter assistance. I'll update this page as appointments,
-          assistance, and actual costs are confirmed. The goal is to
-          show where the money goes, not quietly turn five cats into
-          a mysterious $500 blob.
+          <strong>$200 is a preliminary fundraising target,
+            not a confirmed veterinary quote.</strong>
+          I'm pursuing HAVA and other local low-cost
+          spay/neuter options. The goal will be adjusted
+          when actual costs and assistance are confirmed.
+        </p>
+
+        <p class="cost-note">
+          <strong>What if we raise more than we need?</strong>
+          Any surplus will be directed toward additional
+          community cat spay/neuter efforts — either through
+          a donation to HAVA or by helping me safely trap
+          and arrange sterilization for more neighborhood cats.
+          I'll document where the money goes.
         </p>
 
       </div>
-
     </div>
   </section>
+
 
 
   <!-- CONTRIBUTIONS -->
@@ -1128,7 +1165,7 @@ body {
       The page calculates the percentage automatically.
     */
     const amountRaised = 0;
-    const fundraisingGoal = 500;
+    const fundraisingGoal = 200;
 
     const percentage = Math.min(
       (amountRaised / fundraisingGoal) * 100,
@@ -1137,7 +1174,11 @@ body {
 
     document.getElementById("progressBar").style.width =
       percentage + "%";
+
+    document.getElementById("moneyNumber").innerHTML =
+      `$${amountRaised} <span>of $${fundraisingGoal}</span>`;
   </script>
 
 </body>
+
 </html>
