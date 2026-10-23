@@ -7,7 +7,7 @@
 
   <title>Operation: No More Kittens | Josie Makes</title>
   <meta name="description"
-    content="Five cats. One house. Puberty approaches. Help get Mama and her four teenage kittens spayed and neutered." />
+    content="Three kittens rehomed! Help Mama and her cream-colored kitten get spayed and support community cat care." />
 
   <!-- Same fonts as Josie Makes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -668,9 +668,90 @@
       color: #17552c;
       border: 2px solid #17552c;
     }
+
+    /* LAYOUT + PHOTO REPAIRS — October 2026 */
+    :root {
+      --max: 1120px;
+      --text: var(--cream);
+      --muted: var(--muted-light);
+      --yellow: var(--hot-pink);
+      --purple: #a987df;
+      --blue: #8a9fee;
+      --cyan: #9ae4ee;
+      --shadow: 0 16px 38px rgba(28, 12, 24, .22);
+    }
+    body { color: var(--text-dark); }
+    .eyebrow { color: #812c50; }
+    .section-copy { color: var(--ink-soft); }
+    .hero-tagline span { color: #8d234f; }
+    .hero h1 { color: var(--ink); }
+    .button-primary { background: var(--ink); color: #fff4ee; }
+    .button-secondary { background: rgba(255,255,255,.78); color: var(--ink); }
+    .hero-photo .photo-slot { height: 100%; padding: 0; }
+    .hero-photo .photo-slot img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; }
+    .hero-sticker { background: #f04f8b; color: #241a22; }
+    .story-card { padding: 24px; border-radius: 24px; color: var(--cream); border: 1px solid rgba(255,255,255,.13); }
+    .story-card p, .story-card .story-number { color: var(--muted-light); }
+    .story-card .story-number { color: #ff9fc5; margin-bottom: 14px; }
+    .story-card h3 { color: var(--cream); }
+    .story-photo { margin: 14px 0 22px; }
+    .story-photo img { display: block; width: 100%; max-height: 370px; object-fit: cover; border-radius: 15px; }
+    .story-photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 760px; margin: 25px 0; }
+    .story-photo-pair img { width: 100%; height: 290px; object-fit: cover; border: 3px solid var(--ink); border-radius: 18px; }
+    .story-intro { max-width: 800px; }
+    .story-card .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .story-card .photo-pair .story-photo { margin: 8px 0; }
+    .story-card .photo-pair img { height: 180px; }
+    .story-card .story-photo img { max-height: 250px; }
+    .story-card .story-photo + .story-photo { margin-top: 10px; }
+    .story-card .story-photo figcaption { font-size: .82rem; margin-top: 5px; color: var(--muted-light); }
+    .timeline-card .photo-slot { padding: 0; height: 100%; min-height: 0; display: block; }
+    .timeline-card .photo-slot img { width: 100%; height: 100%; object-fit: cover; }
+    .timeline-card .photo-pair { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+    .timeline-card .photo-pair img { width: 100%; height: 100%; object-fit: cover; }
+    .timeline-caption { color: #fff; z-index: 1; }
+    .puberty { background: rgba(36, 26, 34, .92); color: var(--cream); }
+    .puberty .eyebrow { color: #ff9fc5; }
+    .puberty h2 { color: #ff83ae; }
+    .puberty .fine-print { color: var(--muted-light); margin-top: 24px; }
+    .puberty-gallery { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; max-width: 850px; margin: 25px auto 35px; }
+    .puberty-gallery img { width: 100%; height: 210px; object-fit: cover; border-radius: 18px; }
+    .puberty-photo { max-width: 320px; margin: 25px auto; }
+    .puberty-photo img { width: 100%; max-height: 280px; object-fit: cover; border-radius: 18px; }
+    .adoption-banner h2 { margin: 12px 0; font-size: clamp(1.8rem, 5vw, 3.4rem); line-height: 1.05; }
+    .adoption-banner p { max-width: 650px; margin: 16px auto 0; }
+    .adoption-banner img { width: min(100%, 660px); max-height: 390px; object-fit: contain; margin: 20px auto; border-radius: 18px; }
+    .cat-photo { overflow: hidden; }
+    .cat-photo .photo-slot { padding: 0; height: 100%; }
+    .cat-photo img { display: block; width: 100%; height: 100%; min-height: 330px; max-height: 430px; object-fit: cover; }
+    .cat-card.mama .cat-photo img { max-height: none; }
+    .cat-card { color: var(--cream); }
+    .cat-title, .cat-info p { color: var(--muted-light); }
+    .fundraiser, .contribution { color: var(--cream); }
+    .fundraiser .eyebrow { color: #ff9fc5; }
+    .fundraiser .cost-note, .contribution p { color: var(--muted-light); }
+    .fundraiser .cost-note strong { color: var(--cream); }
+    .contribution .amount { color: #ff9fc5; }
+    .mission-log .log-entry { border-top-color: rgba(36,26,34,.25); }
+    .mission-log .log-date { color: #812c50; }
+    .mission-log .log-entry p, .ending p, footer { color: var(--ink-soft); }
+    .ending .eyebrow { color: #812c50; }
+    @media (max-width: 800px) {
+      .hero-photo .photo-slot img { min-height: 430px; }
+      .story-photo-pair img { height: 220px; }
+      .puberty-gallery img { height: 170px; }
+    }
+    @media (max-width: 500px) {
+      .hero-photo .photo-slot img { min-height: 360px; }
+      .story-photo-pair { gap: 8px; }
+      .story-photo-pair img { height: 170px; }
+      .puberty-gallery { gap: 7px; }
+      .puberty-gallery img { height: 130px; border-radius: 10px; }
+      .story-card { padding: 20px; }
+      .cat-photo img { max-height: 370px; }
+    }
+
   </style>
-</head>
-</style>
 </head>
 
 <body>
@@ -688,8 +769,8 @@
         </h1>
 
         <p class="hero-tagline">
-          Five cats. One house.
-          <span>Puberty approaches.</span>
+          Five cats. Three rehomed.
+          <span>Two snips remain.</span>
         </p>
 
         <p class="section-copy">
@@ -716,7 +797,7 @@
         </div>
 
         <div class="hero-sticker">
-          ⚠️ 5 CATS CURRENTLY IN POSSESSION OF REPRODUCTIVE ORGANS
+          ⚠️ 2 CATS STILL AWAITING THE SNIP
         </div>
       </div>
 
@@ -727,187 +808,107 @@
   <!-- ORIGIN STORY -->
   <section class="section" id="story">
     <div class="wrap">
-
       <div class="eyebrow">Previously, on Josie's House...</div>
-
-      <h2 class="section-title">
-        A lady, her kids, and a coupla cats
-      </h2>
-      <div class="story-photo">
-        <img src="/images/cats/01stardust.JPEG" alt="Pixel, a rainbow calico with lots of white" loading="lazy">
-        <div class="story-photo">
-          <img src="/images/cats/01pixel.JPEG" alt="Stardust, a grey tabby" loading="lazy">
-        </div>
+      <h2 class="section-title">A lady, her kids, and a coupla cats</h2>
+      <div class="story-photo-pair">
+        <img src="/images/cats/01stardust.JPEG" alt="Stardust, one of the resident cats" loading="lazy">
+        <img src="/images/cats/01pixel.JPEG" alt="Pixel, one of the resident cats" loading="lazy">
       </div>
-      <p class="section-copy">
-        We were livin' our lives, chillin' out maxing relaxing all cool, Pixel and Stardust and fam were all vibing.
-      <p>Unfortunately, my CAT LADY VIBES must've been strong because we started making friends with some of the Island
-        Cats.</p>
-      </p>
-
+      <div class="story-intro">
+        <p class="section-copy">We were livin' our lives, chillin' out maxing relaxing all cool, Pixel and Stardust and fam were all vibing.</p>
+        <p class="section-copy">Unfortunately, my CAT LADY VIBES must've been strong because we started making friends with some of the Island Cats.</p>
+      </div>
       <div class="story-grid">
-
         <article class="story-card">
           <div class="story-number">01 / MAMA</div>
           <h3>A stray appears.</h3>
-          <img src="/images/cats/01petsandfood.JPEG" alt="Feeding and Petting Mama Kitty" loading="lazy">
+          <div class="story-photo"><img src="/images/cats/01petsandfood.JPEG" alt="Feeding and petting Mama Kitty" loading="lazy"></div>
+          <p>Cream-point. Pregnant. In need of somewhere safe. Obviously this ended normally and without consequences.</p>
+          <div class="story-photo"><img src="/images/cats/01oneofthemanytoms.JPEG" alt="Toby, a sandy orange tabby" loading="lazy"></div>
+          <p>There are lots of free livin' cats on the Island. Toby is one of the ones that needs to take a paternity test...</p>
+          <p>However, word on the street is, the baby daddy is a Big, Black Beefcake runnin the upper streets...named El Chapo.</p>
+          <p>He has since adopted a local family and has had his seedfactory removed, so this might very well be El Chapo's last living batch of kittens.</p>
+        </article>
+        <article class="story-card">
+          <div class="story-number">02 / CONSEQUENCES</div>
+          <h3>Surprise! Babies.</h3>
+          <div class="story-photo"><img src="/images/cats/01postpartumama.JPEG" alt="Mama with her newborn kittens" loading="lazy"></div>
+          <div class="photo-pair">
+            <div class="story-photo"><img src="/images/cats/01 newborn puddle.JPEG" alt="Newborn kitten puddle" loading="lazy"></div>
+            <div class="story-photo"><img src="/images/cats/01jellybeans.jpeg" alt="Tiny newborn jellybeans" loading="lazy"></div>
+          </div>
+          <p>Four of them. Three tiny black voids and one cream-colored copy-paste situation.</p>
+        </article>
+        <article class="story-card">
+          <div class="story-number">03 / ME, APPARENTLY</div>
+          <h3>I become a cat midwife.</h3>
+          <div class="story-photo"><img src="/images/cats/01midwife.jpeg" alt="Josie on cat midwife duty" loading="lazy"></div>
+          <p>Birth assistance. Mama care. Baby care. Socialization. Photos. Laundry. So much laundry.</p>
+          <div class="photo-pair">
+            <div class="story-photo"><img src="/images/cats/02chewysnuggles.JPEG" alt="Kittens getting pet by the Giant" loading="lazy"></div>
+            <div class="story-photo"><img src="/images/cats/01bebesiamese.JPEG" alt="Daughter holding Siamese kitten" loading="lazy"></div>
+          </div>
+          <div class="story-photo"><img src="/images/cats/01midwiferyduties.JPEG" alt="Feeding homemade cat food and kibble" loading="lazy"></div>
+          <p>SO MUCH CUTE.</p>
+          <div class="story-photo"><img src="/images/cats/01siamese hand.JPEG" alt="Holding the newborn Siamese" loading="lazy"></div>
+        </article>
       </div>
-      <p>
-        Cream-point. Pregnant. In need of somewhere safe.
-        Obviously this ended normally and without consequences.
-      </p>
-      </article>
-      <div class="story-photo">
-        <img src="/images/cats/01oneofthemanytoms.JPEG" alt="Toby, a sandy orange tabby licking his balls proudly"
-          loading="lazy">
-      </div>
-      <p>
-        There are lots of free livin' cats on the Island. Toby is one of the ones that needs to take a paternity test...
-      <p>However, word on the street is, the baby daddy is a Big, Black Beefcake runnin the upper streets...named El
-        Chapo.</p>
-      <p>He has since adopted a local family and has had his seedfactory removed, so this might very well be El Chapo's
-        last living batch of kittens</p>
-      </p>
-      <article class="story-card">
-        <div class="story-number">02 / CONSEQUENCES</div>
-        <h3>Surprise! Babies.</h3>
-
-        <div class="story-photo">
-          <img src="/images/cats/01postpartumama.JPEG" alt="Toby, a sandy orange tabby" loading="lazy">
-        </div>
-        <div class="story-photo">
-          <img src="/images/cats/01 newborn puddle.JPEGG" alt="Toby, a sandy orange tabby" loading="lazy">
-        </div>
-        <div class="story-photo">
-          <img src="/images/cats/01jellybeans.jpeg" alt="Toby, a sandy orange tabby" loading="lazy">
-        </div>
-        <p>
-          Four of them. Three tiny black voids and one
-          cream-colored copy-paste situation.
-        </p>
-      </article>
-
-      <article class="story-card">
-        <div class="story-number">03 / ME, APPARENTLY</div>
-        <div class="story-photo">
-          <img src="/images/cats/01midwife.jpeg" alt="Josie midwife" loading="lazy">
-        </div>
-        <h3>I become a cat midwife.</h3>
-        <p>
-          Birth assistance. Mama care. Baby care. Socialization.
-          Photos. Laundry. So much laundry.
-        </p>
-        <div class="story-photo">
-          <img src="/images/cats/02chewysnuggles.JPEG" alt="Kittens getting pet by the Giant" loading="lazy">
-        </div>
-        <div class="story-photo">
-          <img src="/images/cats/01bebesiamese.JPEG" alt="Daughter holding siamese kitten" loading="lazy">
-        </div>
-
-        <div class="story-photo">
-          <img src="/images/cats/01midwiferyduties.JPEG" alt="Feeding homemade catfood(salmon) and kibble"
-            loading="lazy">
-        </div>
-        <p>SO MUCH CUTE.</p>
-        <div class="story-photo">
-          <img src="/images/cats/01siamese hand.JPEG" alt="holding newborn siamese" loading="lazy">
-        </div>
-
-
-      </article>
-
-    </div>
-
     </div>
   </section>
-
 
   <!-- PHOTO TIMELINE -->
   <section class="section">
     <div class="wrap">
-
       <div class="eyebrow">The Potato Archives</div>
-
-      <h2 class="section-title">
-        They started extremely small.
-      </h2>
-
-      <p class="section-copy">
-        From freshly manufactured beans to fully operational
-        household criminals.
-      </p>
-
+      <h2 class="section-title">They started extremely small.</h2>
+      <p class="section-copy">From freshly manufactured beans to fully operational household criminals.</p>
       <div class="timeline">
-
         <div class="timeline-card">
-          <div class="photo-slot"><img src="/images/cats/01nursingbebes.JPEG"
-              alt="Mama and kittens safe and warm and happily nursing!" loading="lazy"></div>
+          <div class="photo-slot"><img src="/images/cats/01nursingbebes.JPEG" alt="Mama and kittens nursing" loading="lazy"></div>
           <div class="timeline-caption">Day 1: fresh potatoes</div>
         </div>
-
         <div class="timeline-card">
-          <div class="photo-slot"><img src="/images/cats/01siameseeyesclosed.JPEG" alt="siamese kitten eyes closed"
-              loading="lazy"></div>
-          <div class="photo-slot"><img src="/images/cats/01siameseinstars.JPEG" alt="siamese kitten eyes opened"
-              loading="lazy"></div>
+          <div class="photo-pair">
+            <img src="/images/cats/01siameseeyesclosed.JPEG" alt="Siamese kitten with eyes closed" loading="lazy">
+            <img src="/images/cats/01siameseinstars.JPEG" alt="Siamese kitten with eyes open" loading="lazy">
+          </div>
           <div class="timeline-caption">Eyes online</div>
         </div>
-
         <div class="timeline-card">
-          <div class="photo-slot"><img src="/images/cats/01twins.JPEG" alt="black twins stretching tiny legs"
-              loading="lazy"></div>
+          <div class="photo-slot"><img src="/images/cats/01twins.JPEG" alt="Black twin kittens stretching" loading="lazy"></div>
           <div class="timeline-caption">Legs acquired</div>
         </div>
-
         <div class="timeline-card">
-          <div class="photo-slot"><img src="/images/cats/01blackscale.JPEG" alt="black kitty on scale" loading="lazy">
+          <div class="photo-pair">
+            <img src="/images/cats/01blackscale.JPEG" alt="Tiny black kitten on a scale" loading="lazy">
+            <img src="/images/cats/01blackscalebasket.JPEG" alt="Growing black kitten on a scale in a basket" loading="lazy">
           </div>
           <div class="timeline-caption">Growing every day</div>
         </div>
-        <div class="photo-slot"><img src="/images/cats/01blackscalebasket.JPEG"
-            alt="black kitty on scale bigger in basket" loading="lazy">
-        </div>
-
         <div class="timeline-card">
-          <div class="photo-slot"><img src="/images/cats/01siblingsnuggle.JPEG" alt="Kittens snuggling in house"
-              loading="lazy"></div>
-          <div class="timeline-caption">
-            Increasingly suspicious levels of competence
+          <div class="photo-pair">
+            <img src="/images/cats/01siblingsnuggle.JPEG" alt="Sibling kittens snuggling" loading="lazy">
+            <img src="/images/cats/02blacktwins.JPEG" alt="Black twin kittens climbing a chair" loading="lazy">
           </div>
+          <div class="timeline-caption">Increasingly suspicious levels of competence</div>
         </div>
-        <div class="photo-slot"><img src="/images/cats/02blacktwins.JPEG" alt="black twins climbing chair"
-            loading="lazy"></div>
       </div>
-
     </div>
   </section>
-
 
   <!-- PUBERTY -->
   <section class="puberty">
     <div class="wrap">
-
       <div class="eyebrow">Current Situation</div>
-      <div class="photo-slot"><img src="/images/cats/02siamesebebe.JPEG" alt="siamese baby big blue eyes"
-          loading="lazy"></div>
-      <div class="photo-slot"><img src="/images/cats/02ohhello.JPEG" alt="black kitty climb ladder" loading="lazy">
+      <div class="puberty-gallery">
+        <img src="/images/cats/02siamesebebe.JPEG" alt="Siamese baby with big blue eyes" loading="lazy">
+        <img src="/images/cats/02ohhello.JPEG" alt="Black kitten climbing a ladder" loading="lazy">
+        <img src="/images/cats/03blackstare.JPEG" alt="Black kitten staring" loading="lazy">
       </div>
-      <div class="photo-slot"><img src="/images/cats/03blackstare.JPEG" alt="black kitty climb stare" loading="lazy">
-      </div>
-      <h2>OH $#%&!.<br>PUBERTY.</h2>
-
-      <p class="potatoes">
-        Unfortunately, the potatoes developed genitals.
-      </p>
-      <div class="photo-slot"><img src="/images/cats/02siamesebutt.JPEG" alt="siamese baby butt" loading="lazy"></div>
-      <p class="fine-print">
-        They are adorable. They are siblings.
-        They do not care. Current best estimate:
-        three females and two males total.
-        Everyone needs to be fixed before nature makes this
-        situation exponentially stupider.
-      </p>
-
+      <h2>OH $#%&amp;!.<br>PUBERTY.</h2>
+      <p class="potatoes">Unfortunately, the potatoes developed genitals.</p>
+      <div class="puberty-photo"><img src="/images/cats/02siamesebutt.JPEG" alt="Siamese kitten showing off its backside" loading="lazy"></div>
+      <p class="fine-print">They are adorable. They are siblings. They do not care. Current best estimate: three females and two males total. Everyone needs to be fixed before nature makes this situation exponentially stupider.</p>
     </div>
   </section>
 
@@ -933,7 +934,7 @@
       <div class="eyebrow">Meet the Suspects</div>
 
       <h2 class="section-title">
-        Five cats. Zero family planning skills.
+        Five suspects. Three released into custody.
       </h2>
 
       <div class="cats-grid">
@@ -956,23 +957,14 @@
               Retired CEO, Kitten Production Division
             </div>
 
-            <p>
-              Mama kitty, a sweet and shy neighborhood cat, began visiting me more and more. </p>
+            <p>Mama kitty, a sweet and shy neighborhood cat, began visiting me more and more.</p>
             <p>As we became friends (with the help of kitty treats), she trusted me with scratches and belly rubs.</p>
-            <p> I borrowed a kitty house and put it outside for her with fresh, soft blankets. She moved in right away.
+            <p>I borrowed a kitty house and put it outside for her with fresh, soft blankets. She moved in right away.</p>
+            <p>May 28th, I came home to find the teenage neighbor fretting because Mama Kitty had had her kittens on the lower balcony roof and then carried them one by one, down the stairs and up the other stairs to get to her Fully Furnished CatBox Apartment.</p>
+            <p>Unfortunately, 2 white (Siamese) kitties were lost in the birth/transfer process. 3 black kitties and 1 white kitty remained.</p>
+            <p>It was chilly, the babies were tiny, and Mama was tired. So, while all were safe in their KittyApartment, I moved them all inside, segregating them from my existing Kitty Crew.</p>
+            <p>Before I knew it, I was providing daily midwife duties, enriching Mama's kibble with tuna, salmon, and chicken. Cleaning bedding. Cleaning crusty bits.</p>
           </div>
-          </p>
-          <p> May 28th, I came home to find the teenage neighbor fretting because Mama Kitty had had her kittens on the
-            lower balcony roof and then carried them one by one, down the stairs and up the other stairs to get to her
-            Fully Furnished CatBox Apartment</p>
-          <p>Unfortunately, 2 white (siamese) kitties were lost in the birth/transfer process. 3 black kitties and 1
-            white kitty remained.</p>
-          <p>It was chilly, the babies were tiny, and mama was tired. So, while all were safe in their KittyApartment, I
-            moved them all inside, segregating them from my existing Kitty Crew.</p>
-          <p>Before I knew it, I was providing daily midwife duties, enriching mama's kibble with tuna, salmon, and
-            chicken. Cleaning bedding. Cleaning crusty bits.</p>
-      </div>
-
       </article>
 
 
@@ -1115,7 +1107,7 @@
 
 
   <!-- CONTRIBUTIONS -->
-  <section class="section">
+  <section class="section" id="contributions">
     <div class="wrap">
 
       <div class="eyebrow">Choose Your Level of Intervention</div>
