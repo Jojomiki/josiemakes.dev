@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Operation: No More Kittens | Josie Makes</title>F
+  <title>Operation: No More Kittens | Josie Makes</title>
   <meta name="description"
     content="Three kittens rehomed! Help Mama and her cream-colored kitten get spayed and support community cat care." />
 
@@ -898,13 +898,7 @@
       .consequences-card .story-photo img { aspect-ratio: 4 / 3; height: auto; }
     }
 
-  <p style="text-align:center; font-size:0.95rem; margin:18px 0; color:#ffe1eb;">
-  🐾 <strong>Help us keep the kitten accounting straight!</strong><br>
-  When sending your contribution through Cash App,
-  please enter <strong>“Operation: No More Kittens”</strong>
-  in the payment memo so we can track every dollar raised.
-</p>
-    
+  
     /* Cash App contribution links */
     .cash-intro { max-width: 720px; line-height: 1.65; margin: 12px 0 24px; }
     .cash-button { display: inline-flex; align-items: center; justify-content: center; text-align: center; margin-top: 18px; padding: 12px 16px; min-height: 44px; border-radius: 999px; background: #f04f8b; color: #241a22 !important; font-weight: 800; text-decoration: none; font-size: .84rem; letter-spacing: .02em; transition: transform .15s ease, filter .15s ease; }
@@ -913,42 +907,17 @@
     @media (max-width: 650px) { .cash-button { width: 100%; } }
 
 
-    /* Show the entire baby, no accidental decapitation */
-.timeline-card img.show-whole-photo {
-  object-fit: contain !important;
-  object-position: center;
-  background: #30242e;
-}
-.kitten-selfie {
-  max-width: 620px;
-  margin: 36px auto;
-  padding: 12px 12px 20px;
-  background: #fff0f5;
-  border: 2px solid #35232f;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 7px 8px 0 #35232f;
-}
+    /* Lion incident: mission bulletin */
+    .lion-report { max-width: 950px; margin: 0 auto 48px; padding: clamp(20px,4vw,38px); background: #28232b; color: #fff4f6; border: 2px solid #f39aba; border-radius: 24px; box-shadow: 8px 8px 0 #442d3b; }
+    .lion-report .eyebrow { color: #ffaccd; }
+    .lion-report h2 { color: #fff4f6; font-size: clamp(1.65rem, 4vw, 2.65rem); line-height: 1.12; margin: 12px 0 16px; }
+    .lion-report p { color: #f4e1e9; line-height: 1.65; }
+    .lion-report-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 26px; align-items: center; }
+    .lion-evidence { display: block; border: 2px solid #ffaccd; background: #fff; border-radius: 12px; overflow: hidden; }
+    .lion-evidence img { display: block; width: 100%; height: auto; }
+    .lion-report figcaption { margin-top: 9px; font-size: .78rem; color: #ffb6d0; text-align: center; }
+    @media (max-width: 720px) { .lion-report-grid { grid-template-columns: 1fr; } .lion-report { box-shadow: 4px 5px 0 #442d3b; } }
 
-.kitten-selfie img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.kitten-selfie figcaption {
-  color: #35232f;
-  font-weight: 800;
-  padding: 14px 8px 0;
-}
-
-.kitten-selfie figcaption small {
-  display: block;
-  font-weight: 400;
-  margin-top: 6px;
-}
-    
 </style>
 </head>
 
@@ -1057,15 +1026,7 @@
       </div>
     </div>
   </section>
-<section> <figure class="kitten-selfie">
-  <img src="/images/cats/01kitten%20dreams.JPEG"
-       alt="Josie lying beside four newborn kittens">
-  <figcaption>
-    ✦ THE MATERNITY WARD, MANAGEMENT INCLUDED ✦
-    <small>Four tiny potatoes. One very tired human.
-    Absolutely no regrets. (Some regrets.)</small>
-  </figcaption>
-</figure></section>
+
   <!-- PHOTO TIMELINE -->
   <section class="section">
     <div class="wrap">
@@ -1079,11 +1040,7 @@
         </div>
         <div class="timeline-card">
           <div class="photo-pair">
-            <img
-  src="/images/cats/01siameseeyesclosed.JPEG"
-  class="show-whole-photo"
-  alt="Tiny cream-colored kitten with eyes closed"
->
+            <img src="/images/cats/01siameseeyesclosed.JPEG" alt="Siamese kitten with eyes closed" loading="lazy">
             <img src="/images/cats/01siameseinstars.JPEG" alt="Siamese kitten with eyes open" loading="lazy">
           </div>
           <div class="timeline-caption">Eyes online</div>
@@ -1298,7 +1255,7 @@
         </div>
 
         <p class="cost-note">
-          <strong>$300 is a preliminary fundraising target,
+          <strong>$300 is a preliminary fundraising target for spay/neuter surgeries and veterinary checkups,
             not a confirmed veterinary quote.</strong>
           I'm pursuing HAVA and other local low-cost
           spay/neuter options. The goal will be adjusted
@@ -1319,6 +1276,29 @@
   </section>
 
 
+
+  <!-- LATEST MISSION UPDATE -->
+  <section class="section" id="mission-update" aria-labelledby="lion-title">
+    <div class="wrap">
+      <article class="lion-report">
+        <div class="eyebrow">🦁 October 26, 2026 // Mission Status Report</div>
+        <h2 id="lion-title">BREAKING NEWS: Clinic prepared for lions. Not my cats.</h2>
+        <div class="lion-report-grid">
+          <div>
+            <p>I've started trying to book Mama and Mini-Me's spay/neuter appointments! Northwest Spay &amp; Neuter Center is currently booked for the next three weeks, but new appointments open daily. The hunt continues.</p>
+            <p>Meanwhile, their booking form offers separate options for <strong>male and female LIONS.</strong></p>
+            <p><strong>I have questions. So many questions.</strong> 🦁💀</p>
+          </div>
+          <figure>
+            <a class="lion-evidence" href="/images/cats/Lionswtf.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot of the booking form showing lion options">
+              <img src="/images/cats/Lionswtf.jpg" alt="Screenshot of the Northwest Spay and Neuter Center appointment form offering Lion Male and Lion Female options alongside cats and dogs" loading="lazy">
+            </a>
+            <figcaption>EXHIBIT A: Click for full-size photographic evidence.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- CONTRIBUTIONS -->
   <section class="section" id="contributions">
@@ -1371,7 +1351,7 @@
   </section>
 
 
-  <div class="wrap"><p class="cash-disclaimer">💗 Personal fundraiser for Mama and her cream-colored kitten’s spay/neuter care. Any surplus will support HAVA or other local cat sterilization efforts. Contributions are not tax-deductible charitable donations. Cash App may require you to enter the amount manually.</p></div>
+  <div class="wrap"><p class="cash-disclaimer">💗 Personal fundraiser for Mama and her cream-colored kitten’s spay/neuter surgeries and veterinary checkups. Any surplus will support HAVA or other local cat sterilization efforts. Contributions are not tax-deductible charitable donations. Cash App may require you to enter the amount manually.</p></div>
 
   <!-- MISSION LOG -->
   <section class="section">
@@ -1403,15 +1383,6 @@
         </div>
 
         <div class="log-entry">
-          <div class="log-date">JUNE 2026</div>
-          <div>
-            <strong>What the FLUFF</strong>
-            <p>
-              Monitoring & Midwifing & watching the little beans turn into FLOOFS.
-            </p>
-          </div>
-        </div>
-        <div class="log-entry">
           <div class="log-date">SUMMER</div>
           <div>
             <strong>Foster era.</strong>
@@ -1422,56 +1393,14 @@
             </p>
           </div>
         </div>
-      <div class="mission-log">
 
         <div class="log-entry">
-          <div class="log-date">AUGUST 2026</div>
+          <div class="log-date">OCT 2026</div>
           <div>
-            <strong>It's getting CROWDED IN HERE</strong>
+            <strong>Operation: No More Kittens begins.</strong>
             <p>
-              Kittens grow, and their once BIG ROOM becomes increasingly smaller. F#%* I have SEVEN CATS right Meow. LIGHT PANIC. Rescues contacted, but they are all full :(. Apparently, "Kitten Season" is a thing and we are part of it this year.
-            </p>
-          </div>
-        </div>
-
-         <div class="log-entry">
-          <div class="log-date">SEPTEMBER 2026</div>
-          <div>
-            <strong>Puberty approaches</strong>
-            <p>
-              I realize the kittens will soon be of reproductive age as they reach 4 months. FULL PANIC. I also realize I've been working 9-to-5 cleaning dang litterboxes.
-              Rehoming efforts begin in earnest. I begin contacting rescues and posting on local sites.
-            </p>
-          </div>
-        </div>
-
-        <div class="log-entry">
-          <div class="log-date">EARLY OCTOBER 2026</div>
-          <div>
-            <strong>Farewell, brave one. </strong>
-            <p>
-             First, a little black boy kitty was adopted out to a sweet older couple who had just lost their prized Persian and wanted a good sturdy boy to accompany their sweet orange boy. They were *DELIGHTED* to learn of his potential ancestry leading back to the Chonky El Chapo of the Island Street Cats.
-            </p>
-          </div>
-        </div>
-       <div class="log-entry">
-         
-          <div class="log-date">MID OCTOBER 2026</div>
-          <div>
-            <strong>Goodbye for Meow, may we meet again someday <3 </strong>
-            <p>
-              I'm acting in a play, lamenting about my kitten situation. The director, having just lost a longtime feline friend, agreed to adopt one the next day.  His excitement increased, and he ended up adopting the two remaining black twins, buddies ever since landing earthside. I was sad to see them go, as I had really bonded with one of them, but they are all happy in their new family!
-            </p>
-          </div>
-        </div>
-        
-        
-        <div class="log-entry">
-          <div class="log-date">TODAY</div>
-          <div>
-            <strong>Two Siamese remain</strong>
-            <p>
-            When the kittens were first born, everyone wanted the siamese baby. She was rare, floofy, and cute features. I even contemplated keeping her. But, every adoption lead turned into a dead end, and in a ironic twist of fate, the once-coveted Siamese remains unadopted. And still annoying her mama with trying to nurse like Robbin Arryn on GoT.
+              Contacting HAVA/local resources, confirming sexes,
+              costs, and surgery options. Updates incoming.
             </p>
           </div>
         </div>
@@ -1518,7 +1447,7 @@
       CHANGE THESE TWO NUMBERS as donations come in.
       The page calculates the percentage automatically.
     */
-    const amountRaised = 175;
+    const amountRaised = 0;
     const fundraisingGoal = 300;
 
     const percentage = Math.min(
