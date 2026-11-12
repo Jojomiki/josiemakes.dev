@@ -440,9 +440,12 @@
       letter-spacing: -.06em;
     }
 
+    .money-number { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 18px; row-gap: 0; }
     .money-number span {
       color: var(--muted);
       font-size: .4em;
+      letter-spacing: -.02em;
+      white-space: nowrap;
     }
 
     .progress-track {
@@ -1262,7 +1265,7 @@
             </p>
 
             <div class="money-number" id="moneyNumber">
-              $0 <span>of $300</span>
+              $275 <span>of $400</span>
             </div>
           </div>
 
@@ -1276,11 +1279,23 @@
         </div>
 
         <p class="cost-note">
-          <strong>$300 is a preliminary fundraising target for spay/neuter surgeries and veterinary checkups,
-            not a confirmed veterinary quote.</strong>
-          I'm pursuing HAVA and other local low-cost
-          spay/neuter options. The goal will be adjusted
-          when actual costs and assistance are confirmed.
+          <strong>Four wonderful donors have raised $275!</strong> Russ and Aria donated $100 each,
+          and two other supporters gave $25 and $50. Just $125 to reach our working $400 goal.
+        </p>
+
+        <p class="cost-note">
+          <strong>The N.O.A.H. estimate for two female cats:</strong>
+          $220 for spays + $40 FVRCP vaccines + $40 rabies vaccines + $40 on-site flea treatments
+          = <strong>$340 estimated veterinary costs</strong>. The remaining $60 in our $400 goal
+          helps with the long round trip to Stanwood and possible extra expenses.
+          This is a planning estimate, not a final clinic quote; additional services or costs may change it.
+        </p>
+
+        <p class="cost-note">
+          <strong>Mission status:</strong> Korea's appointment was requested for November 18, 2026,
+          and is <strong>pending approval</strong>. Her $25 deposit has been paid and credited toward
+          the surgery (not added to the $340 estimate). Mama still needs an appointment.
+          The clinic is roughly 175 miles away each way — this is a full-on cat road trip!
         </p>
 
         <p class="cost-note">
@@ -1526,8 +1541,8 @@
       CHANGE THESE TWO NUMBERS as donations come in.
       The page calculates the percentage automatically.
     */
-    const amountRaised = 175;
-    const fundraisingGoal = 300;
+    const amountRaised = 275;
+    const fundraisingGoal = 400;
 
     const percentage = Math.min(
       (amountRaised / fundraisingGoal) * 100,
