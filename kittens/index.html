@@ -918,6 +918,27 @@
     .lion-report figcaption { margin-top: 9px; font-size: .78rem; color: #ffb6d0; text-align: center; }
     @media (max-width: 720px) { .lion-report-grid { grid-template-columns: 1fr; } .lion-report { box-shadow: 4px 5px 0 #442d3b; } }
 
+
+/* November mission updates */
+.update-panel{margin:26px 0;padding:clamp(18px,3vw,34px);background:#28232b;border:2px solid #f39aba;border-radius:22px;color:#fff4f6}
+.update-panel h2,.update-panel h3{color:#fff4f6}.update-panel p{color:#f4e1e9;line-height:1.65}
+.update-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.update-panel figure{margin:0}.update-panel img{display:block;width:100%;height:auto;border-radius:12px}
+.update-panel figcaption{font-size:.82rem;color:#ffbfd6;margin-top:9px;line-height:1.5}
+.update-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.update-gallery figure img{aspect-ratio:4/3;object-fit:cover}
+.evidence-link{display:block;border:2px solid #ffaccd;border-radius:13px;overflow:hidden}
+.flip-scene{perspective:1200px;max-width:600px;margin:24px auto 0}
+.flip-card{position:relative;width:100%;aspect-ratio: 1.55;transform-style:preserve-3d;transition:transform .7s ease;cursor:pointer;border:0;background:transparent;padding:0;display:block;text-align:left;color:white}
+.flip-card.is-flipped{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:3px solid #ffaccd;border-radius:18px;overflow:hidden;background:#332634;display:flex;flex-direction:column}
+.flip-face.back{transform:rotateY(180deg)}
+.flip-face img{height:calc(100% - 65px);width:100%;object-fit:cover;border-radius:0}
+.flip-face strong{display:flex;align-items:center;justify-content:center;flex:1;padding:10px;text-align:center;font-size:clamp(.85rem,2.5vw,1.15rem);color:#fff4f6}
+.flip-hint{text-align:center;color:#ffbfd6!important;font-size:.9rem}
+@media(max-width:700px){.update-grid,.update-gallery{grid-template-columns:1fr}.flip-card{aspect-ratio:1.05}}
+@media(prefers-reduced-motion:reduce){.flip-card{transition:none}}
+
 </style>
 </head>
 
@@ -1300,6 +1321,63 @@
     </div>
   </section>
 
+
+  <!-- NOVEMBER 2026 FIELD REPORT -->
+  <section class="section" id="november-update">
+    <div class="wrap">
+      <div class="eyebrow">November 12, 2026 // The Plot Thickens</div>
+      <h2 class="section-title">THE RECEIPTS (AND OTHER CRIMES)</h2>
+      <p class="section-copy">Two Siamese suspects remain in residence. The black-cat alumni are thriving. The paperwork is getting real.</p>
+
+      <article class="update-panel">
+        <div class="eyebrow">Exhibit B // Appointment Bureaucracy</div>
+        <h2>THE SNIP IS IN MOTION ✂️</h2>
+        <div class="update-grid">
+          <div>
+            <p>Korea's spay/neuter appointment has been <strong>requested for November 18, 2026</strong> at the N.O.A.H. Center in Stanwood, Washington. The clinic has received the request, and the <strong>$25 deposit has been credited</strong>.</p>
+            <p><strong>Status: pending clinic approval.</strong> This is not yet a confirmed appointment. We're watching for the confirmation email.</p>
+            <p><a href="https://www.thenoahcenter.org/" target="_blank" rel="noopener noreferrer">Visit the N.O.A.H. Center ↗</a></p>
+          </div>
+          <figure><a class="evidence-link" href="/images/cats/BookingInstructions.png" target="_blank" rel="noopener noreferrer"><img src="/images/cats/BookingInstructions.png" alt="N.O.A.H. Center confirmation screen stating information received and appointment pending" loading="lazy"></a><figcaption>Actual appointment status. Click to enlarge. Pending means pending!</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="update-panel">
+        <div class="eyebrow">Exhibit C // The Expedition</div>
+        <h2>WOW. SUCH FAR! 🚗</h2>
+        <div class="update-grid">
+          <div><p>Apparently reproductive responsibility requires an epic road trip. Stanwood is a long way from home, but the mission must go on.</p><p>And yes, the pink cat on the map is part of the official navigational strategy.</p></div>
+          <figure><a class="evidence-link" href="/images/cats/drivingdirections.png" target="_blank" rel="noopener noreferrer"><img src="/images/cats/drivingdirections.png" alt="Humorous map of the long drive to the N.O.A.H. Center, decorated with a pink cat and WOW SUCH FAR text" loading="lazy"></a><figcaption>Cartographic evidence of our suffering. Click to enlarge.</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="update-panel">
+        <div class="eyebrow">Exhibit D // Alumni Update</div>
+        <h2>TWO VOIDS HAVE FOUND A HOME 🐈‍⬛</h2>
+        <p>Russ reports that his new kittens have made his home their home. We love a happy ending. The household furnishings may disagree.</p>
+        <div class="flip-scene"><button class="flip-card" id="russFlip" type="button" aria-label="Flip Russ's kitten update to reveal the damaged lamp" aria-pressed="false">
+          <span class="flip-face front"><img src="/images/cats/Russcats.png" alt="Russ's two adopted black kittens relaxing in their new home" loading="lazy"><strong>ADOPTED &amp; THRIVING — TAP TO FLIP ↻</strong></span>
+          <span class="flip-face back"><img src="/images/cats/Russcatslamp.png" alt="Photo update showing a knocked-over, broken lamp in the kittens' new home" loading="lazy"><strong>PROPERTY DAMAGE REPORTED. NO REFUNDS. ↻</strong></span>
+        </button></div>
+        <p class="flip-hint">Tap or click the card to inspect the crime scene.</p>
+      </article>
+
+      <article class="update-panel">
+        <div class="eyebrow">Exhibit E // Still at Headquarters</div>
+        <h2>MACY &amp; KORY: THE HOME FRONT</h2>
+        <p>The remaining Siamese crew continues to specialize in dramatic staring, extreme lounging, and very questionable personal boundaries.</p>
+        <div class="update-gallery">
+          <figure><img src="/images/cats/koreastare.JPEG" alt="Young Siamese cat looking straight at the camera from the cat tree" loading="lazy"><figcaption>That look says she knows things.</figcaption></figure>
+          <figure><img src="/images/cats/korylookup.JPEG" alt="Siamese cat looking upward from the pink cat tree" loading="lazy"><figcaption>Surveillance is ongoing.</figcaption></figure>
+          <figure><img src="/images/cats/exhausting.JPEG" alt="Siamese cat sprawled dramatically around a cat tree post" loading="lazy"><figcaption>Exhausted by the demands of being a cat.</figcaption></figure>
+          <figure><img src="/images/cats/mumbabysword.JPEG" alt="Two Siamese cats resting together near a toy sword" loading="lazy"><figcaption>Mother, child, and a suspiciously large sword.</figcaption></figure>
+          <figure><img src="/images/cats/stillnursing.JPEG" alt="Siamese kitten still nursing from mother" loading="lazy"><figcaption>Somebody hasn't read the weaning memo.</figcaption></figure>
+          <figure><img src="/images/cats/tortillacat.JPEG" alt="Siamese cat enjoying chin scratches beside a tortilla-pattern blanket" loading="lazy"><figcaption>A tortilla-wrapped menace.</figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- CONTRIBUTIONS -->
   <section class="section" id="contributions">
     <div class="wrap">
@@ -1405,6 +1483,7 @@
           </div>
         </div>
 
+        <div class="log-entry"><div class="log-date">NOV 12, 2026</div><div><strong>Appointment requested; deposit paid.</strong><p>Korea's November 18 request is pending approval at the N.O.A.H. Center. The adopted voids are doing well, except for one unfortunate lamp.</p></div></div>
       </div>
 
     </div>
@@ -1462,6 +1541,16 @@
       `$${amountRaised} <span>of $${fundraisingGoal}</span>`;
   </script>
 
+<script>
+(function(){
+  const card=document.getElementById('russFlip');
+  if(card) card.addEventListener('click',function(){
+    const flipped=card.classList.toggle('is-flipped');
+    card.setAttribute('aria-pressed',String(flipped));
+    card.setAttribute('aria-label',flipped?'Flip back to Russ\'s adopted kittens':'Flip to reveal the damaged lamp');
+  });
+})();
+</script>
 </body>
 
 </html>
