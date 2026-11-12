@@ -922,6 +922,14 @@
     @media (max-width: 720px) { .lion-report-grid { grid-template-columns: 1fr; } .lion-report { box-shadow: 4px 5px 0 #442d3b; } }
 
 
+/* Six compact donation options */
+.contribution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.contribution{display:flex;flex-direction:column;min-width:0}
+.contribution .cash-button{margin-top:auto}
+.contribution p{flex:1}
+@media(max-width:800px){.contribution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.contribution-grid{grid-template-columns:1fr}}
+
 /* November mission updates */
 .update-panel{margin:26px 0;padding:clamp(18px,3vw,34px);background:#28232b;border:2px solid #f39aba;border-radius:22px;color:#fff4f6}
 .update-panel h2,.update-panel h3{color:#fff4f6}.update-panel p{color:#f4e1e9;line-height:1.65}
@@ -1279,8 +1287,7 @@
         </div>
 
         <p class="cost-note">
-          <strong>Four wonderful donors have raised $275!</strong> Russ and Aria donated $100 each,
-          and two other supporters gave $25 and $50. Just $125 to reach our working $400 goal.
+          <strong>Four wonderful donors have raised $275!</strong> That leaves just <strong>$125</strong> to reach our working $400 goal. No sad violin soundtrack required — just two cats, a very long road trip, and some extremely real vet bills.
         </p>
 
         <p class="cost-note">
@@ -1292,10 +1299,7 @@
         </p>
 
         <p class="cost-note">
-          <strong>Mission status:</strong> Korea's appointment was requested for November 18, 2026,
-          and is <strong>pending approval</strong>. Her $25 deposit has been paid and credited toward
-          the surgery (not added to the $340 estimate). Mama still needs an appointment.
-          The clinic is roughly 175 miles away each way — this is a full-on cat road trip!
+          <strong>Mission status:</strong> $25 deposits have been paid for <strong>both Mama and Korea</strong> ($50 total), credited toward their surgeries — not added to the $340 estimate. Korea's November 18, 2026 appointment request is pending approval. The clinic is roughly <strong>175 miles each way</strong> (about 350 miles round trip). Yes, we are road-tripping for cat birth control.
         </p>
 
         <p class="cost-note">
@@ -1349,7 +1353,7 @@
         <h2>THE SNIP IS IN MOTION ✂️</h2>
         <div class="update-grid">
           <div>
-            <p>Korea's spay/neuter appointment has been <strong>requested for November 18, 2026</strong> at the N.O.A.H. Center in Stanwood, Washington. The clinic has received the request, and the <strong>$25 deposit has been credited</strong>.</p>
+            <p>Korea's spay/neuter appointment has been <strong>requested for November 18, 2026</strong> at the N.O.A.H. Center in Stanwood, Washington. The clinic has received the request. <strong>Both Mama's and Korea's $25 deposits have been paid</strong> and will count toward their surgeries.</p>
             <p><strong>Status: pending clinic approval.</strong> This is not yet a confirmed appointment. We're watching for the confirmation email.</p>
             <p><a href="https://www.thenoahcenter.org/" target="_blank" rel="noopener noreferrer">Visit the N.O.A.H. Center ↗</a></p>
           </div>
@@ -1403,42 +1407,47 @@
         Every little bit helps de-sex a potato.
       </h2>
 
-      <p class="cash-intro">Send your contribution directly through Cash App. Add <strong>“Kitten snips”</strong> to the payment note so I know which tiny criminals you’re supporting.</p>
+      <p class="cash-intro">No dramatic music. No sad slow-motion kittens. Just a few extremely affordable ways to become an accomplice. Send contributions through Cash App with <strong>“Kitten snips”</strong> in the note.</p>
 
       <div class="contribution-grid">
-
         <div class="contribution">
           <div class="amount">$5</div>
-          <h3>NO COOKIE. ALL CAT.</h3>
-          <p>
-            You receive nothing except the knowledge that
-            your five dollars went directly toward preventing
-            extremely ill-advised family relationships.
-          </p>
+          <h3>BUY A CAT A COFFEE*</h3>
+          <p>*Absolutely do not. Cats cannot have coffee. But five bucks can help fuel the getaway car.</p>
           <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $5 VIA CASH APP ↗</a>
         </div>
-
         <div class="contribution">
-          <div class="amount">$15</div>
-          <h3>CRIME PREVENTION UNIT</h3>
-          <p>
-            A respectable contribution toward vaccines,
-            surgery, medication, or other official cat bureaucracy.
-          </p>
-          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $15 VIA CASH APP ↗</a>
+          <div class="amount">$10</div>
+          <h3>FUND THE GETAWAY CAR</h3>
+          <p>Two cats. Approximately 350 miles round trip. Not one of them has offered to pay for gas.</p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $10 VIA CASH APP ↗</a>
         </div>
-
         <div class="contribution">
-          <div class="amount">$25+</div>
-          <h3>GENITAL DISARMAMENT SPONSOR</h3>
-          <p>
-            Congratulations. You are now emotionally invested
-            in whether a cat gets to keep its reproductive equipment.
-          </p>
-          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $25+ VIA CASH APP ↗</a>
+          <div class="amount">$20</div>
+          <h3>EVICT THE FLEAS</h3>
+          <p>About the estimated cost of one cat's on-site flea treatment. These freeloaders have freeloaders.</p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $20 VIA CASH APP ↗</a>
         </div>
-
+        <div class="contribution">
+          <div class="amount">$25</div>
+          <h3>DEPOSIT-SIZED HERO</h3>
+          <p>Equal to one surgery deposit. Both deposits are already paid, so yours helps cover the rest of the mission.</p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $25 VIA CASH APP ↗</a>
+        </div>
+        <div class="contribution">
+          <div class="amount">$40</div>
+          <h3>VACCINATE THE FUGITIVES</h3>
+          <p>Roughly covers one listed vaccine for each cat. Tiny criminals, respectable paperwork.</p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $40 VIA CASH APP ↗</a>
+        </div>
+        <div class="contribution">
+          <div class="amount">$50+</div>
+          <h3>MAJOR ACCOMPLICE</h3>
+          <p>A generous boost toward ending this family's extremely enthusiastic reproduction era.</p>
+          <a class="cash-button" href="https://cash.app/$jojomiki" target="_blank" rel="noopener noreferrer">SEND $50+ VIA CASH APP ↗</a>
+        </div>
       </div>
+      <p class="cash-disclaimer">These are suggested amounts, not fixed purchases. All contributions support the combined veterinary and travel budget; Cash App may ask you to enter the amount manually.</p>
 
     </div>
   </section>
@@ -1498,7 +1507,7 @@
           </div>
         </div>
 
-        <div class="log-entry"><div class="log-date">NOV 12, 2026</div><div><strong>Appointment requested; deposit paid.</strong><p>Korea's November 18 request is pending approval at the N.O.A.H. Center. The adopted voids are doing well, except for one unfortunate lamp.</p></div></div>
+        <div class="log-entry"><div class="log-date">NOV 12, 2026</div><div><strong>Appointments in progress; both deposits paid.</strong><p>Both cats' $25 deposits have been paid. Korea's November 18 request is pending approval at the N.O.A.H. Center. The adopted voids are doing well, except for one unfortunate lamp.</p></div></div>
       </div>
 
     </div>
